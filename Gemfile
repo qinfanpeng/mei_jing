@@ -8,10 +8,11 @@ gem 'therubyracer', :platforms => :ruby
 gem "twitter-bootstrap-rails"
 gem 'bootstrap-will_paginate', '0.0.6'
 
-gem 'client_side_validations'
 gem 'slim'
 gem 'slim-rails'
 
+gem 'client_side_validations'
+gem 'rails_kindeditor', '~> 0.4.0'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

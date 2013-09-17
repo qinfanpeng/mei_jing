@@ -21,7 +21,8 @@
   .control-group
     = f.label t('article.content'), :class => 'control-label', for: 'article_content'
     .controls
-      = f.text_area :content, :class => 'text_area', rows: 1000, cols: 100
+      /= f.text_area :content, :class => 'text_area', rows: 1000, cols: 100
+      = f.kindeditor :content, width: 850, height: 400, simple_mode: true
 
 
   .form-actions

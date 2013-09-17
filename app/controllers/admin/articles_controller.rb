@@ -35,6 +35,7 @@ class Admin::ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    @columns = Column.all
     @article = Article.find(params[:id])
   end
 

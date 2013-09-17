@@ -45,8 +45,8 @@ class Admin::ArticlesController < ApplicationController
   def create
     @article = Article.new(params[:article])
     respond_to do |format|
-      if @article.save and
-          ColumnArticle.create_column_articles(params[:column_ids], @article.id)
+      if @article.save #and
+        #ColumnArticle.update_column_articles(params[:column_ids], @article.id)
         format.html { redirect_to [:admin, @article], notice: 'Article was successfully created.' }
         format.json { render json: @article, status: :created, location: @article }
       else
@@ -64,10 +64,12 @@ class Admin::ArticlesController < ApplicationController
   # PUT /articles/1
   # PUT /articles/1.json
   def update
+    p "------"
+    p params[:article][:column_ids]
     @article = Article.find(params[:id])
     respond_to do |format|
-      if @article.update_attributes(params[:article]) and
-          ColumnArticle.create_column_articles(params[:column_ids], @article.id)
+      if @article.update_attributes(params[:article])# and
+          #ColumnArticle.update_column_articles(params[:column_ids], @article.id)
         format.html { redirect_to [:admin, @article], notice: 'Article was successfully updated.' }
         format.json { head :no_content }
       else
@@ -88,5 +90,4 @@ class Admin::ArticlesController < ApplicationController
       format.json { head :no_content }
     end
   end
-x
 end

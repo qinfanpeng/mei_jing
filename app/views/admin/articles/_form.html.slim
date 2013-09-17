@@ -4,7 +4,7 @@
     = f.label t('article.column'), :class => 'control-label', for: 'article_column_id'
     .controls.column_ids_controls
       - @columns.each do |column|
-        = check_box_tag('column_ids[]', column.id)
+        = check_box_tag('article[column_ids][]', column.id, @article.columns.include?(column))
         = label_tag('column_ids[]', column.name)
   .control-group
     = f.label t('article.publisher'), :class => 'control-label', for: 'article_publisher'

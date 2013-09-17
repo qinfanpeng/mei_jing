@@ -1,6 +1,5 @@
 class Column < ActiveRecord::Base
   attr_accessible :name
 
-  has_many :column_articles
-  has_many :articles, through: :column_articles
+  has_and_belongs_to_many :articles
 end

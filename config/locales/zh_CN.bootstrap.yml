@@ -1,0 +1,40 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+zh_CN:
+  helpers:
+    actions: "操作"
+    mei_jing: 简易每经网
+    mei_jing_admin: 简易每经网后台管理
+    links:
+      back: "返回"
+      cancel: "取消"
+      confirm: "你确定?"
+      destroy: "删除"
+      new: "新建"
+      edit: "编辑"
+    titles:
+      edit: "编辑 %{model}"
+      save: "保存 %{model}"
+      new: "新建 %{model}"
+      delete: "删除 %{model}"
+
+  time:
+    formats:
+      default: "%y-%m-%d"
+
+  article:
+    title: 标题
+    digest: 摘要
+    image: 配图
+    publisher: 发布人
+    status: 状态
+    time: 发布时间
+    content: 正文
+    column: 所属栏目
+    publish: 发布
+    update: 更新文章
+    write: 写文章
+    edit: 编辑文章
+    draft: 存为草稿
+    created_at: 创建时间

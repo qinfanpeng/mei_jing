@@ -1,0 +1,89 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+
+
+
+@mixin gradient($start_color, $end_color)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '$start_color', endColorstr = '$end_color')
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '$start_color', endColorstr = '$end_color')"
+  background-image: -webkit-gradient(linear, center top, center bottom, from($start_color), to($end_color))
+  background-image: linear-gradient(top, $start_color, $end_color)
+  background-image: -moz-linear-gradient(top, $start_color, $end_color)
+  background-image: -ms-linear-gradient(top, $start_color, $end_color)
+  background-image: -o-linear-gradient(top, $start_color, $end_color)
+  background-image: -webkit-linear-gradient(top, $start_color, $end_color)
+  background-image: linear-gradient(top, $start_color, $end_color)
+
+$start_color: hsla(198, 100%, 60%, 1)
+$end_color: hsla(198, 100%, 48%, 1)
+$admin_start_color: hsla(213, 32%, 27%, 1)
+$admin_end_color: hsla(213, 32%, 24%, 1)
+
+.navbar-inner
+  @include gradient($start_color, $end_color)
+  height: 46px
+  padding-top: 7px
+  a
+    color: white !important
+    &:hover
+      background-color: hsla(198, 100%, 40%, 1) !important
+
+#admin-navbar
+  height: 50px
+  @include gradient($admin_start_color, $admin_end_color)
+
+#admin-sidebar-nav
+  background-color: hsla(214, 18%, 92%, 1)
+  height: 650px
+  width: 180px
+  margin-top: -20px
+#admin-span2
+  margin-left: -16px
+  border-right: 1px sold  hsla(214, 18%, 70%, 1)!important
+
+div.page-header
+  margin-bottom: 15px
+  h1
+    font-size: 18px
+    color: hsla(0, 0%, 47%, 1)
+    font-weight: normal
+
+.btn-primary
+  margin-right: 5px
+  color: hsla(0, 100%, 100%, 1) !important
+
+a.brand
+  &:hover
+    background-color: hsla(198, 100%, 40%, 1)
+
+table
+  tr
+    th
+      font-weight: normal
+    td
+      a
+        &:hover
+          background-color: #F5F5F5
+          color: #52a8ec
+
+a.dropdown-toggle:hover
+  cursor: pointer
+
+.hero-unit
+  p
+    font-size: 100%
+
+.center
+  text-align: center
+
+#error_explanation
+  border: none
+
+.nav-list
+//  li  a
+   // background-color: hsl(0, 0%, 93%)

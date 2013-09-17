@@ -33,8 +33,12 @@ zh_CN:
     content: 正文
     column: 所属栏目
     publish: 发布
+    published: 已发布
     update: 更新文章
     write: 写文章
     edit: 编辑文章
     draft: 存为草稿
+    drafted: 草稿
     created_at: 创建时间
+    all: 所有文章
+    draft_bin: 草稿箱

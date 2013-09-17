@@ -7,6 +7,10 @@
         = check_box_tag('column_ids[]', column.id)
         = label_tag('column_ids[]', column.name)
   .control-group
+    = f.label t('article.publisher'), :class => 'control-label', for: 'article_publisher'
+    .controls
+      = f.text_field :publisher, :class => 'file_field'
+  .control-group
     = f.label t('article.image'), :class => 'control-label', for: 'article_image'
     .controls
       = f.text_field :image, :class => 'file_field'
@@ -21,8 +25,8 @@
   .control-group
     = f.label t('article.content'), :class => 'control-label', for: 'article_content'
     .controls
-      /= f.text_area :content, :class => 'text_area', rows: 1000, cols: 100
       = f.kindeditor :content, width: 850, height: 400, simple_mode: true
+      = f.hidden_field :status, value: 'published'
 
 
   .form-actions
@@ -30,6 +34,5 @@
       = f.submit t('article.publish'), :class => 'btn btn-primary'
     -else
       = f.submit t('article.update'), :class => 'btn btn-primary'
-
-    = link_to t('article.draft'), "#", class: 'btn'
+    = f.submit t('article.draft'), class: 'btn', id: 'draft_btn'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), admin_articles_path, :class => 'btn'

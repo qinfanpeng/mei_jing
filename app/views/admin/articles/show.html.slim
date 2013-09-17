@@ -15,26 +15,30 @@ p
   br
   = l @article.created_at
 p
-  strong= t('article.content') + ':'
-  br
-  = raw @article.content
-
-p
-  strong= t('article.image') + ':'
-  br
-  = @article.image
-p
   strong= t('article.publisher') + ':'
   br
   = @article.publisher
 p
   strong= t('article.status') + ':'
   br
-  = @article.status
+  = t("article.#{@article.status}")
+p
+  strong= t('article.image') + ':'
+  br
+  = @article.image
 p
   strong= t('article.column') + ':'
   br
-  = @article.column_article_id
+  ul
+  - @columns.each do |column|
+    li= column.name
+p
+  strong= t('article.content') + ':'
+  br
+  = raw @article.content
+
+
+
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), admin_articles_path, :class => 'btn'

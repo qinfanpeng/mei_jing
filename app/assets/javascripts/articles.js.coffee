@@ -1,3 +1,4 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+jQuery ->
+  # 当点击存为草稿按钮时候， 修改status字段的值为draft
+  $('#draft_btn').click ->
+    $('#article_status').val('drafted')

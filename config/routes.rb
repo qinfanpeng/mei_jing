@@ -5,7 +5,11 @@ MeiJing::Application.routes.draw do
 
 
   namespace :admin do
-    resources :articles
+    resources :articles do
+      collection do
+        get :drafted
+      end
+    end
   end
 
   scope :module => "admin" do

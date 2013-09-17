@@ -15,6 +15,7 @@ class Admin::ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
+    @columns = @article.columns
 
     respond_to do |format|
       format.html # show.html.erb
@@ -43,9 +44,9 @@ class Admin::ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(params[:article])
-    _column_ids = params[:column_ids]
     respond_to do |format|
-      if @article.save and ColumnArticle.create_column_articles(_column_ids, @article.id)
+      if @article.save and
+          ColumnArticle.create_column_articles(params[:column_ids], @article.id)
         format.html { redirect_to [:admin, @article], notice: 'Article was successfully created.' }
         format.json { render json: @article, status: :created, location: @article }
       else
@@ -55,13 +56,19 @@ class Admin::ArticlesController < ApplicationController
     end
   end
 
+  def drafted
+    @articles = Article.where(status: 'drafted')
+    render :index
+  end
+
   # PUT /articles/1
   # PUT /articles/1.json
   def update
     @article = Article.find(params[:id])
 
     respond_to do |format|
-      if @article.update_attributes(params[:article])
+      if @article.update_attributes(params[:article]) and
+          ColumnArticle.create_column_articles(params[:column_ids], @article.id)
         format.html { redirect_to [:admin, @article], notice: 'Article was successfully updated.' }
         format.json { head :no_content }
       else

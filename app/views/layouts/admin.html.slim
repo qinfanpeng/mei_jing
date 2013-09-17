@@ -39,8 +39,8 @@ html lang="en"
             ul.nav.nav-list
               li.nav-header Sidebar
               li= link_to t('article.write'), new_admin_article_path
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
+              li= link_to t('article.all'), admin_articles_path
+              li= link_to t('article.draft_bin'), drafted_admin_articles_path
         .span10
           = bootstrap_flash
           = yield

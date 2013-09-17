@@ -11,18 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130917065817) do
+ActiveRecord::Schema.define(:version => 20130917104739) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.text     "content"
     t.text     "digest"
-    t.string   "image"
     t.string   "publisher"
     t.string   "status"
     t.integer  "column_article_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "column_articles", :force => true do |t|

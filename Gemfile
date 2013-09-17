@@ -13,6 +13,7 @@ gem 'slim-rails'
 
 gem 'client_side_validations'
 gem 'rails_kindeditor', '~> 0.4.0'
+gem "paperclip", "~> 3.0"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

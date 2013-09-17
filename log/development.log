@@ -24903,3 +24903,1013 @@ Served asset /admin/columns.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 17:04:30 +0800
 Served asset /application.js - 304 Not Modified (43ms)
+
+
+Started GET "/admin/articles/1/edit" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Processing by Admin::ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mColumn Load (0.2ms)[0m  SELECT "columns".* FROM "columns" 
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered admin/articles/_form.html.slim (6.8ms)
+  Rendered admin/articles/edit.html.slim within layouts/admin (8.3ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/columns.css?body=1" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /admin/columns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/admin/columns.js?body=1" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /admin/columns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /kindeditor/kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/kindeditor/themes/default/default.css" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /kindeditor/themes/default/default.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor/lang/zh_CN.js?ver=4.1.7%20(2013-04-21)" for 127.0.0.1 at 2013-09-17 17:11:18 +0800
+Served asset /kindeditor/lang/zh_CN.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/articles/1/edit" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Processing by Admin::ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mColumn Load (0.2ms)[0m  SELECT "columns".* FROM "columns" 
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered admin/articles/_form.html.slim (14.4ms)
+  Rendered admin/articles/edit.html.slim within layouts/admin (15.8ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/columns.css?body=1" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /admin/columns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/kindeditor/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /kindeditor/kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/columns.js?body=1" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /admin/columns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor/themes/default/default.css" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /kindeditor/themes/default/default.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor/lang/zh_CN.js?ver=4.1.7%20(2013-04-21)" for 127.0.0.1 at 2013-09-17 17:15:44 +0800
+Served asset /kindeditor/lang/zh_CN.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/articles/1/edit" for 127.0.0.1 at 2013-09-17 17:21:14 +0800
+Processing by Admin::ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mColumn Load (0.2ms)[0m  SELECT "columns".* FROM "columns" 
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered admin/articles/_form.html.slim (6.6ms)
+  Rendered admin/articles/edit.html.slim within layouts/admin (8.9ms)
+Completed 200 OK in 100ms (Views: 67.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/columns.css?body=1" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /admin/columns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /kindeditor/kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/columns.js?body=1" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /admin/columns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/kindeditor/themes/default/default.css" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /kindeditor/themes/default/default.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor/lang/zh_CN.js?ver=4.1.7%20(2013-04-21)" for 127.0.0.1 at 2013-09-17 17:21:15 +0800
+Served asset /kindeditor/lang/zh_CN.js - 304 Not Modified (0ms)
+
+
+Started PUT "/admin/articles/1" for 127.0.0.1 at 2013-09-17 17:49:40 +0800
+Processing by Admin::ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3kzJfCGWK6N53LI01JYF203Jglzx4gU3KKVJh2VxFRU=", "column_ids"=>["1", "2"], "article"=>{"publisher"=>"张三", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f65fc986458 @original_filename="屏幕截图 - 2013年09月12日 - 10时34分59秒.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE - 2013\xE5\xB9\xB409\xE6\x9C\x8812\xE6\x97\xA5 - 10\xE6\x97\xB634\xE5\x88\x8659\xE7\xA7\x92.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/tmp/RackMultipart20130917-18380-1h74qui>>, "title"=>"create(column_id: _column_id, article_id: @article.id)", "digest"=>"create(column_id: _column_id, article_id: @article.id)", "content"=>"create(column_id: _column_id, article_id: @article.id)", "status"=>"published"}, "commit"=>"更新文章", "id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 4ms
+
+Encoding::UndefinedConversionError ("\x89" from ASCII-8BIT to UTF-8):
+  app/controllers/admin/articles_controller.rb:99:in `write'
+  app/controllers/admin/articles_controller.rb:99:in `block in upload_file'
+  app/controllers/admin/articles_controller.rb:98:in `open'
+  app/controllers/admin/articles_controller.rb:98:in `upload_file'
+  app/controllers/admin/articles_controller.rb:71:in `update'
+
+
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started PUT "/admin/articles/1" for 127.0.0.1 at 2013-09-17 17:53:39 +0800
+Processing by Admin::ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3kzJfCGWK6N53LI01JYF203Jglzx4gU3KKVJh2VxFRU=", "column_ids"=>["1", "2"], "article"=>{"publisher"=>"张三", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f65fc5e1050 @original_filename="屏幕截图 - 2013年09月12日 - 10时34分59秒.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE - 2013\xE5\xB9\xB409\xE6\x9C\x8812\xE6\x97\xA5 - 10\xE6\x97\xB634\xE5\x88\x8659\xE7\xA7\x92.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/tmp/RackMultipart20130917-18380-gkkayp>>, "title"=>"create(column_id: _column_id, article_id: @article.id)", "digest"=>"create(column_id: _column_id, article_id: @article.id)", "content"=>"create(column_id: _column_id, article_id: @article.id)", "status"=>"published"}, "commit"=>"更新文章", "id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 89ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/admin/articles_controller.rb:73:in `block in update'
+  app/controllers/admin/articles_controller.rb:72:in `update'
+
+
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.1ms)
+
+
+Started PUT "/admin/articles/1" for 127.0.0.1 at 2013-09-17 17:54:35 +0800
+Processing by Admin::ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3kzJfCGWK6N53LI01JYF203Jglzx4gU3KKVJh2VxFRU=", "column_ids"=>["1"], "article"=>{"publisher"=>"张三", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f65fc3f37e8 @original_filename="屏幕截图 - 2013年09月12日 - 10时34分59秒.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE - 2013\xE5\xB9\xB409\xE6\x9C\x8812\xE6\x97\xA5 - 10\xE6\x97\xB634\xE5\x88\x8659\xE7\xA7\x92.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/tmp/RackMultipart20130917-18380-1w7jivf>>, "title"=>"create(column_id: _column_id, article_id: @article.id)", "digest"=>"create(column_id: _column_id, article_id: @article.id)", "content"=>"create(column_id: _column_id, article_id: @article.id)", "status"=>"published"}, "commit"=>"更新文章", "id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 48ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/admin/articles_controller.rb:73:in `block in update'
+  app/controllers/admin/articles_controller.rb:72:in `update'
+
+
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.7ms)
+
+
+Started GET "/admin/articles/1/edit" for 127.0.0.1 at 2013-09-17 17:59:30 +0800
+Processing by Admin::ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mColumn Load (0.2ms)[0m  [1mSELECT "columns".* FROM "columns" [0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered admin/articles/_form.html.slim (13.8ms)
+  Rendered admin/articles/edit.html.slim within layouts/admin (16.1ms)
+Completed 200 OK in 73ms (Views: 52.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/columns.css?body=1" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /admin/columns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /articles.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/kindeditor/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /kindeditor/kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/columns.js?body=1" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /admin/columns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor/themes/default/default.css" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /kindeditor/themes/default/default.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor/lang/zh_CN.js?ver=4.1.7%20(2013-04-21)" for 127.0.0.1 at 2013-09-17 17:59:31 +0800
+Served asset /kindeditor/lang/zh_CN.js - 304 Not Modified (0ms)
+
+
+Started PUT "/admin/articles/1" for 127.0.0.1 at 2013-09-17 17:59:47 +0800
+Processing by Admin::ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3kzJfCGWK6N53LI01JYF203Jglzx4gU3KKVJh2VxFRU=", "column_ids"=>["1"], "article"=>{"publisher"=>"张三", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f65ec353988 @original_filename="屏幕截图 - 2013年08月16日 - 20时29分59秒.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE - 2013\xE5\xB9\xB408\xE6\x9C\x8816\xE6\x97\xA5 - 20\xE6\x97\xB629\xE5\x88\x8659\xE7\xA7\x92.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/tmp/RackMultipart20130917-18380-1iesbex>>, "title"=>"create(column_id: _column_id, article_id: @article.id)", "digest"=>"create(column_id: _column_id, article_id: @article.id)", "content"=>"create(column_id: _column_id, article_id: @article.id)", "status"=>"published"}, "commit"=>"更新文章", "id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/admin/articles_controller.rb:73:in `block in update'
+  app/controllers/admin/articles_controller.rb:72:in `update'
+
+
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
+
+
+Started GET "/admin/articles/1/edit" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Processing by Admin::ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mColumn Load (0.5ms)[0m  SELECT "columns".* FROM "columns" 
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered admin/articles/_form.html.slim (6.6ms)
+  Rendered admin/articles/edit.html.slim within layouts/admin (8.1ms)
+Completed 200 OK in 34ms (Views: 27.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin/columns.css?body=1" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /admin/columns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /kindeditor/kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/columns.js?body=1" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /admin/columns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /articles.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/kindeditor/themes/default/default.css" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /kindeditor/themes/default/default.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor/lang/zh_CN.js?ver=4.1.7%20(2013-04-21)" for 127.0.0.1 at 2013-09-17 18:10:38 +0800
+Served asset /kindeditor/lang/zh_CN.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started PUT "/admin/articles/1" for 127.0.0.1 at 2013-09-17 18:11:26 +0800
+Processing by Admin::ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3kzJfCGWK6N53LI01JYF203Jglzx4gU3KKVJh2VxFRU=", "column_ids"=>["1"], "article"=>{"publisher"=>"张三", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000000393bc98 @original_filename="屏幕截图 - 2013年09月12日 - 10时34分59秒.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE - 2013\xE5\xB9\xB409\xE6\x9C\x8812\xE6\x97\xA5 - 10\xE6\x97\xB634\xE5\x88\x8659\xE7\xA7\x92.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/tmp/RackMultipart20130917-24414-cri2yf>>, "title"=>"create(column_id: _column_id, article_id: @article.id)", "digest"=>"create(column_id: _column_id, article_id: @article.id)", "content"=>"create(column_id: _column_id, article_id: @article.id)", "status"=>"published"}, "commit"=>"更新文章", "id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 135ms
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/admin/articles_controller.rb:73:in `block in update'
+  app/controllers/admin/articles_controller.rb:72:in `update'
+
+
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateArticles (20130916103916)
+Migrating to CreateColumns (20130917030338)
+Migrating to CreateColumnArticles (20130917065817)
+Migrating to RemoveImageColumnOfArticle (20130917104247)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (2.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateArticles (20130916103916)
+Migrating to CreateColumns (20130917030338)
+Migrating to CreateColumnArticles (20130917065817)
+Migrating to RemoveImageColumnOfArticle (20130917104247)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TEMPORARY TABLE "altered_articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "digest" text, "image" varchar(255), "publisher" varchar(255), "status" varchar(255), "column_article_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "articles"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "altered_articles" ("id","title","content","digest","image","publisher","status","column_article_id","created_at","updated_at") VALUES (1, 'create(column_id: _column_id, article_id: @article.id)', 'create(column_id: _column_id, article_id: @article.id)', 'create(column_id: _column_id, article_id: @article.id)', 'create(column_id: _column_id, article_id: @article.id)', '张三', 'drafted', NULL, '2013-09-17 07:01:16.597455', '2013-09-17 09:04:26.949606')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_articles" ("id","title","content","digest","image","publisher","status","column_article_id","created_at","updated_at") VALUES (2, 'class ColumnArticles < ActiveRecord::Migration end', 'class ColumnArticles < ActiveRecord::Migration
+ 
+end
+', 'class ColumnArticles < ActiveRecord::Migration
+ 
+end
+', 'class ColumnArticles < ActiveRecord::Migration end', NULL, NULL, NULL, '2013-09-17 07:03:45.954266', '2013-09-17 07:03:45.954266')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "altered_articles" ("id","title","content","digest","image","publisher","status","column_article_id","created_at","updated_at") VALUES (3, 'test_kindeditor', '<img src="http://127.0.0.1:3000/assets/kindeditor/plugins/emoticons/images/1.gif" border="0" alt="" /> 
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	<br />
+</p>
+<pre>&lt;script type="text/javascript"&gt;document.write("Hello World!")&lt;/script&gt;</pre>
+和讯股票消息 今日沪深两市出现较大幅度回调下跌，各行业板块全线下挫，近日大涨的上海自贸概念股也都出现大跌，截至收盘，沪指跌2.05%，报2185.56点，跌45.84点，深成指跌1.91%，报8493.78点，跌165.22点，创业板跌0.74%，报1269.36点，跌9.44点。
+<p>
+	<br />
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	<strong>相关阅读</strong> 
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	商务部初裁决定对美太阳能级多晶硅实施临时反补贴
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	商务部16日发布公告称，初裁决定自9月20日起对原产于美国的进口太阳能级多晶硅采用保证金形式实施临时反补贴措施。分析人士表示，这一措施的实施将进一步减少原产于美国多晶硅的进口，国内多晶硅价格可能上涨，但目前国内硅料产能仍总体过剩。
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	并购重组分道制将实施 8月份以来771份重组公告发布
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	上市公司并购重组分道制将于10月8日正式启动的消息发布之后，两市公司筹划重组、并购的事项成了热点。《证券日报》记者统计得知，进入9月份以来，两市共发布229份与重大资产重组相关的公告，平均每天约13份。据不完全统计，昨日晚间，两市关于重组的公告有23份，其中，有3份公告称申请继续停牌或延期复牌。而在此前的8月份，两市发布的重组相关公告共有542份，平均每天17份。
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	<span style="color:#006600;">电商出口退免税政策有望下月出台</span> 
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	跨境电子商务再次成为舆论焦点。据记者了解，国家税务总局正会同财政部对跨境电商出口退免税问题展开密集调研，相关政策最快将于10月份出台。
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	“发展跨境电子商务有助于拓展境外消费新市场。此次的电商出口退免税政策明显体现出政府管理部门为了更好服务此类企业对现行管理体制加以改革完善的决心。”对外经贸大学国际商学院教授王素荣在接受《证券日报》记者采访时表示，政策进一步明确电商出口退免税，可以降低企业出口成本，有利于市场竞争，进一步促进跨境电商发展。
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	“大气十条”圈定严管区：京津冀及周边为重中之重
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	日前，国务院出台《大气污染防治行动计划》（以下简称 《大气十条》），环保部表态，将狠抓《大气十条》贯彻落实。
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	昨日 （9月16日），《每日经济新闻(博客,微博)(博客,微博)》记者从环保部网站获悉，环保部日前发布关于认真学习领会贯彻落实《大气十条》的通知，确定的重点治理地区是京津冀、长三角、珠三角三大重点区域，其中，京津冀及周边地区（北京、天津、河北、山西、内蒙古、辽宁、山东）是重中之重。
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	<span style="background-color:#337FE5;">优先支持互联网小微企业</span> 
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	国务院近日发布《关于促进信息消费扩大内需的若干意见》(下简称《意见》),描绘了一幅信息消费大发展的宏伟画卷。政策对产业的扶持可谓多点开花，从基础建设到消费内容，从环境建设到政策优惠均给予全方位支持和保障。在改善企业融资环境方面，《意见》提出金融机构应当按照支持小微企业发展的各项金融政策，对互联网小微企业予以优先支持。鼓励创新型、成长型互联网企业在创业板等上市，稳步扩大企业债、公司债、中期票据和中小企业私募债券发行。
+</p>', ' test_kindeditor', 'test_kindeditor', NULL, 'draft', NULL, '2013-09-17 07:24:15.948312', '2013-09-17 08:49:18.257551')
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "articles"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "digest" text, "publisher" varchar(255), "status" varchar(255), "column_article_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "altered_articles"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "articles" ("id","title","content","digest","publisher","status","column_article_id","created_at","updated_at") VALUES (1, 'create(column_id: _column_id, article_id: @article.id)', 'create(column_id: _column_id, article_id: @article.id)', 'create(column_id: _column_id, article_id: @article.id)', '张三', 'drafted', NULL, '2013-09-17 07:01:16.597455', '2013-09-17 09:04:26.949606')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "articles" ("id","title","content","digest","publisher","status","column_article_id","created_at","updated_at") VALUES (2, 'class ColumnArticles < ActiveRecord::Migration end', 'class ColumnArticles < ActiveRecord::Migration
+ 
+end
+', 'class ColumnArticles < ActiveRecord::Migration
+ 
+end
+', NULL, NULL, NULL, '2013-09-17 07:03:45.954266', '2013-09-17 07:03:45.954266')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "articles" ("id","title","content","digest","publisher","status","column_article_id","created_at","updated_at") VALUES (3, 'test_kindeditor', '<img src="http://127.0.0.1:3000/assets/kindeditor/plugins/emoticons/images/1.gif" border="0" alt="" /> 
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	<br />
+</p>
+<pre>&lt;script type="text/javascript"&gt;document.write("Hello World!")&lt;/script&gt;</pre>
+和讯股票消息 今日沪深两市出现较大幅度回调下跌，各行业板块全线下挫，近日大涨的上海自贸概念股也都出现大跌，截至收盘，沪指跌2.05%，报2185.56点，跌45.84点，深成指跌1.91%，报8493.78点，跌165.22点，创业板跌0.74%，报1269.36点，跌9.44点。
+<p>
+	<br />
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	<strong>相关阅读</strong> 
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	商务部初裁决定对美太阳能级多晶硅实施临时反补贴
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	商务部16日发布公告称，初裁决定自9月20日起对原产于美国的进口太阳能级多晶硅采用保证金形式实施临时反补贴措施。分析人士表示，这一措施的实施将进一步减少原产于美国多晶硅的进口，国内多晶硅价格可能上涨，但目前国内硅料产能仍总体过剩。
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	并购重组分道制将实施 8月份以来771份重组公告发布
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	上市公司并购重组分道制将于10月8日正式启动的消息发布之后，两市公司筹划重组、并购的事项成了热点。《证券日报》记者统计得知，进入9月份以来，两市共发布229份与重大资产重组相关的公告，平均每天约13份。据不完全统计，昨日晚间，两市关于重组的公告有23份，其中，有3份公告称申请继续停牌或延期复牌。而在此前的8月份，两市发布的重组相关公告共有542份，平均每天17份。
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	<span style="color:#006600;">电商出口退免税政策有望下月出台</span> 
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	跨境电子商务再次成为舆论焦点。据记者了解，国家税务总局正会同财政部对跨境电商出口退免税问题展开密集调研，相关政策最快将于10月份出台。
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	“发展跨境电子商务有助于拓展境外消费新市场。此次的电商出口退免税政策明显体现出政府管理部门为了更好服务此类企业对现行管理体制加以改革完善的决心。”对外经贸大学国际商学院教授王素荣在接受《证券日报》记者采访时表示，政策进一步明确电商出口退免税，可以降低企业出口成本，有利于市场竞争，进一步促进跨境电商发展。
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	“大气十条”圈定严管区：京津冀及周边为重中之重
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	日前，国务院出台《大气污染防治行动计划》（以下简称 《大气十条》），环保部表态，将狠抓《大气十条》贯彻落实。
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	昨日 （9月16日），《每日经济新闻(博客,微博)(博客,微博)》记者从环保部网站获悉，环保部日前发布关于认真学习领会贯彻落实《大气十条》的通知，确定的重点治理地区是京津冀、长三角、珠三角三大重点区域，其中，京津冀及周边地区（北京、天津、河北、山西、内蒙古、辽宁、山东）是重中之重。
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	<span style="background-color:#337FE5;">优先支持互联网小微企业</span> 
+</p>
+<p style="font-size:14px;vertical-align:baseline;background-color:#FFFFFF;text-indent:2em;color:#484848;font-family:宋体, serif;">
+	国务院近日发布《关于促进信息消费扩大内需的若干意见》(下简称《意见》),描绘了一幅信息消费大发展的宏伟画卷。政策对产业的扶持可谓多点开花，从基础建设到消费内容，从环境建设到政策优惠均给予全方位支持和保障。在改善企业融资环境方面，《意见》提出金融机构应当按照支持小微企业发展的各项金融政策，对互联网小微企业予以优先支持。鼓励创新型、成长型互联网企业在创业板等上市，稳步扩大企业债、公司债、中期票据和中小企业私募债券发行。
+</p>', ' test_kindeditor', NULL, 'draft', NULL, '2013-09-17 07:24:15.948312', '2013-09-17 08:49:18.257551')
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "altered_articles"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130917104247')
+  [1m[36m (1438.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateArticles (20130916103916)
+Migrating to CreateColumns (20130917030338)
+Migrating to CreateColumnArticles (20130917065817)
+Migrating to RemoveImageColumnOfArticle (20130917104247)
+Migrating to AddAttachmentImageToArticles (20130917104739)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "articles" ADD "image_file_name" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "articles" ADD "image_content_type" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "articles" ADD "image_file_size" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "articles" ADD "image_updated_at" datetime[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130917104739')
+  [1m[36m (1122.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/admin/articles/1/edit" for 127.0.0.1 at 2013-09-17 18:50:27 +0800
+
+ActionController::RoutingError (undefined method `has_attached_file' for #<Class:0x007fe5245298e0>):
+  app/models/article.rb:7:in `<class:Article>'
+  app/models/article.rb:1:in `<top (required)>'
+  app/controllers/admin/articles_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/admin/articles/1/edit" for 127.0.0.1 at 2013-09-17 18:51:06 +0800
+
+ActionController::RoutingError (undefined local variable or method `x' for Admin::ArticlesController:Class):
+  app/controllers/admin/articles_controller.rb:91:in `<class:ArticlesController>'
+  app/controllers/admin/articles_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/qfp/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (47.2ms)
+
+
+Started GET "/admin/articles/1/edit" for 127.0.0.1 at 2013-09-17 18:51:09 +0800
+Processing by Admin::ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mColumn Load (0.2ms)[0m  [1mSELECT "columns".* FROM "columns" [0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered admin/articles/_form.html.slim (62.5ms)
+  Rendered admin/articles/edit.html.slim within layouts/admin (145.4ms)
+Completed 200 OK in 539ms (Views: 488.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/admin/columns.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /admin/columns.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (49ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /articles.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/kindeditor/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /kindeditor/kindeditor.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /kindeditor.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/admin/columns.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /admin/columns.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /articles.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/kindeditor/themes/default/default.css" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /kindeditor/themes/default/default.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/kindeditor/lang/zh_CN.js?ver=4.1.7%20(2013-04-21)" for 127.0.0.1 at 2013-09-17 18:51:10 +0800
+Served asset /kindeditor/lang/zh_CN.js - 304 Not Modified (3ms)
+
+
+Started GET "/admin/articles/1/edit" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Processing by Admin::ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mColumn Load (0.4ms)[0m  [1mSELECT "columns".* FROM "columns" [0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered admin/articles/_form.html.slim (7.9ms)
+  Rendered admin/articles/edit.html.slim within layouts/admin (9.6ms)
+Completed 200 OK in 72ms (Views: 68.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/columns.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /admin/columns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/columns.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /admin/columns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /kindeditor/kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/kindeditor/themes/default/default.css" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /kindeditor/themes/default/default.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/kindeditor/lang/zh_CN.js?ver=4.1.7%20(2013-04-21)" for 127.0.0.1 at 2013-09-17 18:51:13 +0800
+Served asset /kindeditor/lang/zh_CN.js - 304 Not Modified (0ms)
+
+
+Started PUT "/admin/articles/1" for 127.0.0.1 at 2013-09-17 18:51:30 +0800
+Processing by Admin::ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3kzJfCGWK6N53LI01JYF203Jglzx4gU3KKVJh2VxFRU=", "column_ids"=>["1"], "article"=>{"publisher"=>"张三", "image"=>#<ActionDispatch::Http::UploadedFile:0x00000004402de8 @original_filename="屏幕截图 - 2013年09月12日 - 10时34分59秒.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"\xE5\xB1\x8F\xE5\xB9\x95\xE6\x88\xAA\xE5\x9B\xBE - 2013\xE5\xB9\xB409\xE6\x9C\x8812\xE6\x97\xA5 - 10\xE6\x97\xB634\xE5\x88\x8659\xE7\xA7\x92.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/tmp/RackMultipart20130917-25340-1eodq2p>>, "title"=>"create(column_id: _column_id, article_id: @article.id)", "digest"=>"create(column_id: _column_id, article_id: @article.id)", "content"=>"create(column_id: _column_id, article_id: @article.id)", "status"=>"published"}, "commit"=>"更新文章", "id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/屏幕截图 - 2013年09月12日 - 10时34分59秒20130917-25340-13vflti.png[0]'
+Command :: identify -format %m '/tmp/屏幕截图 - 2013年09月12日 - 10时34分59秒20130917-25340-13vflti.png[0]'
+Command :: identify -format %m '/tmp/屏幕截图 - 2013年09月12日 - 10时34分59秒20130917-25340-13vflti.png[0]'
+Command :: identify -format %m '/tmp/屏幕截图 - 2013年09月12日 - 10时34分59秒20130917-25340-13vflti.png[0]'
+Command :: convert '/tmp/屏幕截图 - 2013年09月12日 - 10时34分59秒20130917-25340-13vflti.png[0]' -auto-orient -resize "300x300>" '/tmp/屏幕截图 - 2013年09月12日 - 10时34分59秒20130917-25340-13vflti20130917-25340-1rhljc4'
+Command :: file -b --mime '/tmp/屏幕截图 - 2013年09月12日 - 10时34分59秒20130917-25340-13vflti20130917-25340-1rhljc4'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/屏幕截图 - 2013年09月12日 - 10时34分59秒20130917-25340-13vflti.png[0]'
+Command :: identify -format %m '/tmp/屏幕截图 - 2013年09月12日 - 10时34分59秒20130917-25340-13vflti.png[0]'
+Command :: identify -format %m '/tmp/屏幕截图 - 2013年09月12日 - 10时34分59秒20130917-25340-13vflti.png[0]'
+Command :: identify -format %m '/tmp/屏幕截图 - 2013年09月12日 - 10时34分59秒20130917-25340-13vflti.png[0]'
+Command :: convert '/tmp/屏幕截图 - 2013年09月12日 - 10时34分59秒20130917-25340-13vflti.png[0]' -auto-orient -resize "100x100>" '/tmp/屏幕截图 - 2013年09月12日 - 10时34分59秒20130917-25340-13vflti20130917-25340-1tttwnb'
+Command :: file -b --mime '/tmp/屏幕截图 - 2013年09月12日 - 10时34分59秒20130917-25340-13vflti20130917-25340-1tttwnb'
+  [1m[36m (0.4ms)[0m  [1mUPDATE "articles" SET "image_file_name" = '屏幕截图_-_2013年09月12日_-_10时34分59秒.png', "image_content_type" = 'image/png', "image_file_size" = 697093, "image_updated_at" = '2013-09-17 10:51:30.749399', "status" = 'published', "updated_at" = '2013-09-17 10:51:34.827270' WHERE "articles"."id" = 1[0m
+  [1m[35m (4325.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "column_articles" ("article_id", "column_id") VALUES (?, ?)  [["article_id", 1], ["column_id", 1]]
+  [1m[36m (898.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/admin/articles/1
+Completed 302 Found in 9368ms (ActiveRecord: 5225.3ms)
+
+
+Started GET "/admin/articles/1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Processing by Admin::ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mColumn Load (0.3ms)[0m  [1mSELECT "columns".* FROM "columns" INNER JOIN "column_articles" ON "columns"."id" = "column_articles"."column_id" WHERE "column_articles"."article_id" = 1[0m
+  Rendered admin/articles/show.html.slim within layouts/admin (88.9ms)
+Completed 200 OK in 222ms (Views: 103.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (56ms)
+
+
+Started GET "/assets/admin/columns.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Served asset /admin/columns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Served asset /kindeditor/kindeditor.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/columns.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Served asset /admin/columns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 18:51:40 +0800
+Served asset /kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/articles/1" for 127.0.0.1 at 2013-09-17 18:52:54 +0800
+Processing by Admin::ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mColumn Load (0.3ms)[0m  [1mSELECT "columns".* FROM "columns" INNER JOIN "column_articles" ON "columns"."id" = "column_articles"."column_id" WHERE "column_articles"."article_id" = 1[0m
+  Rendered admin/articles/show.html.slim within layouts/admin (16.2ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 18:52:55 +0800
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 18:52:55 +0800
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-09-17 18:52:55 +0800
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-09-17 18:52:55 +0800
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-17 18:52:55 +0800
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/columns.css?body=1" for 127.0.0.1 at 2013-09-17 18:52:55 +0800
+Served asset /admin/columns.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 18:52:55 +0800
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 18:52:55 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 18:52:55 +0800
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/kindeditor/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 18:52:55 +0800
+Served asset /kindeditor/kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 18:52:55 +0800
+Served asset /kindeditor.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/columns.js?body=1" for 127.0.0.1 at 2013-09-17 18:52:55 +0800
+Served asset /admin/columns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-09-17 18:52:55 +0800
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 18:52:55 +0800
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/admin/articles/1" for 127.0.0.1 at 2013-09-17 18:53:48 +0800
+Processing by Admin::ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mColumn Load (0.3ms)[0m  [1mSELECT "columns".* FROM "columns" INNER JOIN "column_articles" ON "columns"."id" = "column_articles"."column_id" WHERE "column_articles"."article_id" = 1[0m
+  Rendered admin/articles/show.html.slim within layouts/admin (17.0ms)
+Completed 200 OK in 81ms (Views: 78.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 18:53:49 +0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-09-17 18:53:49 +0800
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-09-17 18:53:49 +0800
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-17 18:53:49 +0800
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/columns.css?body=1" for 127.0.0.1 at 2013-09-17 18:53:49 +0800
+Served asset /admin/columns.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-09-17 18:53:49 +0800
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 18:53:49 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 18:53:49 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 18:53:49 +0800
+Served asset /kindeditor/kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 18:53:49 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/kindeditor.js?body=1" for 127.0.0.1 at 2013-09-17 18:53:49 +0800
+Served asset /kindeditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-09-17 18:53:49 +0800
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/columns.js?body=1" for 127.0.0.1 at 2013-09-17 18:53:49 +0800
+Served asset /admin/columns.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 18:53:49 +0800
+Served asset /application.js - 304 Not Modified (2ms)

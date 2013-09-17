@@ -65,7 +65,6 @@ class Admin::ArticlesController < ApplicationController
   # PUT /articles/1.json
   def update
     @article = Article.find(params[:id])
-
     respond_to do |format|
       if @article.update_attributes(params[:article]) and
           ColumnArticle.create_column_articles(params[:column_ids], @article.id)
@@ -89,4 +88,5 @@ class Admin::ArticlesController < ApplicationController
       format.json { head :no_content }
     end
   end
+x
 end

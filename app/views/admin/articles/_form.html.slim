@@ -1,4 +1,4 @@
-= form_for [:admin, @article], :html => { :class => "form-horizontal" } do |f|
+= form_for [:admin, @article], :html => { :class => "form-horizontal", multipart: true } do |f|
 
   .control-group
     = f.label t('article.column'), :class => 'control-label', for: 'article_column_id'
@@ -13,7 +13,7 @@
   .control-group
     = f.label t('article.image'), :class => 'control-label', for: 'article_image'
     .controls
-      = f.text_field :image, :class => 'file_field'
+      = f.file_field :image, :class => 'file_field'
   .control-group
     = f.label t('article.title'), :class => 'control-label', for: 'article_title'
     .controls

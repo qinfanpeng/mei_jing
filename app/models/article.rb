@@ -3,4 +3,6 @@ class Article < ActiveRecord::Base
 
   has_many :column_articles
   has_many :columns, through: :column_articles
+
+  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 end

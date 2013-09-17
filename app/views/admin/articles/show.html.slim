@@ -25,7 +25,7 @@ p
 p
   strong= t('article.image') + ':'
   br
-  = @article.image
+  = image_tag @article.image.url(:thumb)
 p
   strong= t('article.column') + ':'
   br

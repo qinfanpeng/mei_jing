@@ -6,8 +6,16 @@ MeiJing::Application.routes.draw do
 
   namespace :admin do
     resources :articles do
+      member do
+        post :ban
+      end
+
       collection do
         get :drafted
+        post :batch_ban
+        post :batch_destroy
+        post :batch_draft
+        post :batch_classify
       end
     end
   end

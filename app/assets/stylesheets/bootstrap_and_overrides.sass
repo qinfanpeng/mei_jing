@@ -46,12 +46,38 @@ $admin_end_color: hsla(213, 32%, 24%, 1)
   margin-left: -16px
   border-right: 1px sold  hsla(214, 18%, 70%, 1)!important
 
+$action_start: hsl(0, 0%, 96%)
+$action_end: hsl(0, 0%, 88%)
+.form-actions-admin
+  @include gradient($action_start, $action_end)
+  margin-top: 5px
+  margin-bottom: 0px
+  padding: 7px 10px
+  border-bottom: 1px sold hsl(0, 0%, 86%)
+  a
+    margin-right: 8px
+  .btn-group
+    ul.dropdown-menu-admin
+      li
+
+
+
+#table-admin
+  border-top: 2xp sold black
+  thead
+    background-color: hsla(210, 55%, 96%, 1)
+    tr
+      th
+        font-weight: normal
+
+
 div.page-header
-  margin-bottom: 15px
+  padding-bottom: 5px
   h1
     font-size: 18px
     color: hsla(0, 0%, 47%, 1)
-    font-weight: normal
+    font-weight: bold
+    margin: 0px
 
 .btn-primary
   margin-right: 5px

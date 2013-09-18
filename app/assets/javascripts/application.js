@@ -13,5 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require kindeditor
-// require twitter/bootstrap
+//= require twitter/bootstrap/bootstrap-dropdown
 //= require_tree .

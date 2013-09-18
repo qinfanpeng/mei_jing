@@ -4,6 +4,7 @@
 zh_CN:
   helpers:
     actions: "操作"
+    ok: 确认
     mei_jing: 简易每经网
     mei_jing_admin: 简易每经网后台管理
     links:
@@ -21,7 +22,7 @@ zh_CN:
 
   time:
     formats:
-      default: "%y-%m-%d"
+      default: "%Y-%m-%d"
 
   article:
     title: 标题
@@ -31,13 +32,16 @@ zh_CN:
     status: 状态
     time: 发布时间
     content: 正文
-    column: 所属栏目
+    column: 栏目
     publish: 发布
     published: 已发布
     update: 更新文章
     write: 写文章
     edit: 编辑文章
     draft: 存为草稿
+    ban: 屏蔽
+    banned: 已屏蔽
+    classify: 归属到
     drafted: 草稿
     created_at: 创建时间
     all: 所有文章

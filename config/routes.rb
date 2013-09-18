@@ -8,14 +8,20 @@ MeiJing::Application.routes.draw do
     resources :articles do
       member do
         post :ban
+        post :draft
+        post :classify
+        post :publish
       end
 
       collection do
         get :drafted
+        get :banned
+        get :published
         post :batch_ban
         post :batch_destroy
         post :batch_draft
         post :batch_classify
+        post :batch_publish
       end
     end
   end

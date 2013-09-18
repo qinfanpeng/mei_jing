@@ -1,49 +1,30 @@
 - model_class = Article
 div class="page-header"
-  h1=t '.title', :default => model_class.model_name.human.titleize
+  h1= t('article.detail')
 
-p
-  strong= t('article.title') + ':'
-  br
-  = @article.title
-p
-  strong= t('article.digest') + ':'
-  br
-  = @article.digest
-p
-  strong= t('article.created_at') + ':'
-  br
-  = l @article.created_at
-p
-  strong= t('article.publisher') + ':'
-  br
-  = @article.publisher
-p
-  strong= t('article.status') + ':'
-  br
-  = t("article.#{@article.status}")
-p
-  strong= t('article.image') + ':'
-  br
-  = image_tag @article.image.url(:thumb)
-p
-  strong= t('article.column') + ':'
-  br
-  ul
-  - @columns.each do |column|
-    li= column.name
-p
-  strong= t('article.content') + ':'
-  br
-  = raw @article.content
+= render 'btn_toolbar_detail', columns: all_columns, article: @article
+table.table-detail
+  tr
+    th= t('article.title') + ':'
+    td= @article.title
+  tr
+    th= t('article.created_at') + ':'
+    td= l @article.created_at
+  tr
+    th= t('article.publisher') + ':'
+    td= @article.publisher
+  tr
+    th= t('article.status') + ':'
+    td= t("article.#{@article.status}")
+  tr
+    th= t('article.column') + ':'
+    td= (@article.columns.map {|column| column.name}).join(',')
+  tr
+    th= t('article.digest') + ':'
+    td= @article.digest
 
+center= image_tag @article.image.url(:large), id: 'large_image'
 
+= raw @article.content
 
-
-.form-actions
-  = link_to t('.back', :default => t("helpers.links.back")), admin_articles_path, :class => 'btn'
-  '
-  = link_to t('.edit', :default => t("helpers.links.edit")), edit_admin_article_path(@article), :class => 'btn'
-  '
-  = link_to t('.destroy', :default => t("helpers.links.destroy")), admin_article_path(@article), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'
-  = link_to t('article.ban'), ban_admin_article_path(@article), :data => { :confirm => t("helpers.links.confirm") }, :class => 'btn btn-warning', method: 'post'
+= render 'btn_toolbar_detail', columns: all_columns, article: @article

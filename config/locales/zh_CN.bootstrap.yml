@@ -22,7 +22,7 @@ zh_CN:
 
   time:
     formats:
-      default: "%Y-%m-%d"
+      default: "%Y-%m-%d %H:%M"
 
   article:
     title: 标题
@@ -46,3 +46,6 @@ zh_CN:
     created_at: 创建时间
     all: 所有文章
     draft_bin: 草稿箱
+    banned_bin: 屏蔽箱
+    published_bin: 发布箱
+    detail: 文章详情

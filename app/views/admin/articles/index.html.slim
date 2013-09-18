@@ -4,7 +4,7 @@ div class="page-header"
 
 = form_tag '#', id: 'article_batch_form' do |f|
 
-  = render 'btn_toolbar', columns: @columns
+  = render 'btn_toolbar_batch', columns: all_columns
 
   table class="table table-striped table-hover table-condensed table-bordered" id="table-admin"
     thead
@@ -27,4 +27,4 @@ div class="page-header"
           td= (article.columns.map {|column| column.name}).join(',')
           td= l article.created_at
 
-  = render 'btn_toolbar', columns: @columns
+  = render 'btn_toolbar_batch', columns: all_columns

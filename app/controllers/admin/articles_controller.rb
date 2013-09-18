@@ -4,7 +4,6 @@ class Admin::ArticlesController < ApplicationController
   layout 'admin'
   def index
     @articles = Article.all
-    @columns = Column.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articles }
@@ -13,7 +12,6 @@ class Admin::ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    @columns = @article.columns
 
     respond_to do |format|
       format.html # show.html.erb
@@ -23,7 +21,7 @@ class Admin::ArticlesController < ApplicationController
 
   def new
     @article = Article.new
-    @columns = Column.all
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @article }
@@ -31,7 +29,6 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def edit
-    @columns = Column.all
     @article = Article.find(params[:id])
   end
 
@@ -50,6 +47,16 @@ class Admin::ArticlesController < ApplicationController
 
   def drafted
     @articles = Article.where(status: 'drafted')
+    render :index
+  end
+
+  def banned
+    @articles = Article.where(status: 'banned')
+    render :index
+  end
+
+  def published
+    @articles = Article.where(status: 'published')
     render :index
   end
 
@@ -81,6 +88,21 @@ class Admin::ArticlesController < ApplicationController
     redirect_to :back
   end
 
+  def draft
+    draft_article params[:id]
+    redirect_to :back
+  end
+
+  def publish
+    publish_article params[:id]
+    redirect_to :back
+  end
+  def classify
+    id, _column_ids = params[:id], params[:column_ids]
+    Article.find(id).update_attributes(column_ids: _column_ids)
+    redirect_to :back
+  end
+
   def batch_ban
     batch_action(params[:ids], :ban_article) if need_batch_action?(params[:ids])
     redirect_to :back
@@ -103,6 +125,11 @@ class Admin::ArticlesController < ApplicationController
         Article.find(id).update_attributes(column_ids: _column_ids)
       end
     end
+    redirect_to :back
+  end
+
+  def batch_publish
+    batch_action(params[:ids], :publish_article) if need_batch_action?(params[:ids])
     redirect_to :back
   end
 
@@ -132,4 +159,8 @@ class Admin::ArticlesController < ApplicationController
     @article.update_attributes({status: 'drafted'})
   end
 
+  def publish_article(id)
+    @article = Article.find(id)
+    @article.update_attributes({status: 'published'})
+  end
 end

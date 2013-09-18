@@ -22,7 +22,7 @@ jQuery ->
     form.submit()
 
 
-  $(".form-actions-admin a.btn").click ->
+  $(".form-actions-batch a.btn").click ->
     submit_article_batch_form $(this).attr('href')
     return false
 
@@ -33,6 +33,10 @@ jQuery ->
     $(this).find('input').click()
     return false
 
-  $('.classify_ok').click ->
+  $('.classify_batch_ok').click ->
     submit_article_batch_form $(this).attr('href')
+    return false
+
+  $('.classify_ok').click ->
+    form = $('.classify_form').submit()
     return false

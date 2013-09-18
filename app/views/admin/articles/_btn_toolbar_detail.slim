@@ -1,0 +1,23 @@
+
+.form-actions-admin
+  = link_to t("helpers.links.back"), admin_articles_path, :class => 'btn btn-mini'
+  = link_to t("helpers.links.edit"), edit_admin_article_path(article), :class => 'btn btn-mini'
+  = link_to t("helpers.links.destroy"), admin_article_path(article), :method => "delete", data: { confirm: t("helpers.links.confirm") }, class: 'btn btn-danger btn-mini'
+  = link_to t('article.draft'), draft_admin_article_path(article), class: 'btn btn-mini', method: 'post'
+  = link_to t('article.ban'), ban_admin_article_path, class: 'btn btn-mini btn-warning', method: 'post'
+
+  = form_tag classify_admin_article_path(article), class: 'classify_form' do |f|
+    .btn-group
+      button.btn.btn-mini.dropdown-toggle data-toggle= "dropdown"
+        = t('article.classify')
+        span.caret
+      ul.dropdown-menu.dropdown-menu-admin
+        - columns.each do |column|
+          li
+            a
+              = check_box_tag('column_ids[]', column.id)
+              = column.name
+        li.divider
+        li= link_to t('helpers.ok'), '', class: 'classify_ok'
+
+  = link_to t('article.publish'), publish_admin_article_path, class: 'btn btn-mini btn-success', method: 'post'

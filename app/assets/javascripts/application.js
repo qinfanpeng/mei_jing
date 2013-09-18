@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require kindeditor
 //= require twitter/bootstrap/bootstrap-dropdown
+//= require twitter/bootstrap/bootstrap-alert
+//= require rails.validations
 //= require_tree .

@@ -24,6 +24,12 @@ zh_CN:
     formats:
       default: "%Y-%m-%d %H:%M"
 
+  errors:
+    messages:
+      blank: 不能为空
+      too_long: 太长(最多不超过100字)
+
+
   article:
     title: 标题
     digest: 摘要

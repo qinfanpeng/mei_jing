@@ -1,27 +1,27 @@
-= form_for [:admin, @article], :html => { :class => "form-horizontal", multipart: true } do |f|
+= form_for [:admin, @article], :html => { :class => "form-horizontal", multipart: true }, validate: true do |f|
 
   .control-group
     = f.label t('article.column'), :class => 'control-label', for: 'article_column_id'
     .controls.column_ids_controls
-      - @columns.each do |column|
+      - all_columns.each do |column|
         = check_box_tag('article[column_ids][]', column.id, @article.columns.include?(column))
         = label_tag('column_ids[]', column.name)
   .control-group
     = f.label t('article.publisher'), :class => 'control-label', for: 'article_publisher'
     .controls
-      = f.text_field :publisher, :class => 'file_field'
+      = f.text_field :publisher, :class => 'file_field', data: {info: '请输入发布人'}
   .control-group
     = f.label t('article.image'), :class => 'control-label', for: 'article_image'
     .controls
-      = f.file_field :image, :class => 'file_field'
+      = f.file_field :image, :class => 'file_field', data: {info: '请选择要上传的图片文件'}
   .control-group
     = f.label t('article.title'), :class => 'control-label', for: 'article_title'
     .controls
-      = f.text_field :title, :class => 'text_field'
+      = f.text_field :title, :class => 'text_field', data: {info: '请输入文章标题'}
   .control-group
     = f.label t('article.digest'), :class => 'control-label', for: 'article_digest'
     .controls
-      = f.text_area :digest, :class => 'text_area', rows: 4, cols: 100
+      = f.text_area :digest, :class => 'text_area', rows: 4, cols: 100, data: {info: '请输入文章摘要(100字以内)'}
   .control-group
     = f.label t('article.content'), :class => 'control-label', for: 'article_content'
     .controls

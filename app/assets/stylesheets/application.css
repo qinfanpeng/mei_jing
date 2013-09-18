@@ -10,5 +10,7 @@
  *
  *= require_self
  *= require bootstrap_and_overrides
+ *= require scaffolds
+ *= require scaffold_custom
  *= require_tree .
  */

@@ -1,6 +1,6 @@
 
 .form-actions-admin
-  = link_to t("helpers.links.back"), admin_articles_path, :class => 'btn btn-mini'
+  = link_to t("helpers.links.back"), :back, :class => 'btn btn-mini'
   = link_to t("helpers.links.edit"), edit_admin_article_path(article), :class => 'btn btn-mini'
   = link_to t("helpers.links.destroy"), admin_article_path(article), :method => "delete", data: { confirm: t("helpers.links.confirm") }, class: 'btn btn-danger btn-mini'
   = link_to t('article.draft'), draft_admin_article_path(article), class: 'btn btn-mini', method: 'post'

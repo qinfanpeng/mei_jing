@@ -22,7 +22,7 @@
 $start_color: hsla(198, 100%, 60%, 1)
 $end_color: hsla(198, 100%, 48%, 1)
 $admin_start_color: hsla(213, 32%, 27%, 1)
-$admin_end_color: hsla(213, 32%, 24%, 1)
+$admin_end_color: hsla(213, 32%, 15%, 1)
 
 .navbar-inner
   @include gradient($start_color, $end_color)
@@ -33,18 +33,40 @@ $admin_end_color: hsla(213, 32%, 24%, 1)
     &:hover
       background-color: hsla(198, 100%, 40%, 1) !important
 
-#admin-navbar
+.navbar-inner-admin
   height: 50px
   @include gradient($admin_start_color, $admin_end_color)
 
+.navbar-admin
+  margin-bottom: 0px
+
+
+
+
+.container-fluid-admin
+  padding: 0px 5px 5px 5px
+  margin-top: 0px
+
+body
+  overflow: hidden
+
 #admin-sidebar-nav
+  position: absolute
   background-color: hsla(214, 18%, 92%, 1)
-  height: 650px
-  width: 180px
-  margin-top: -20px
-#admin-span2
-  margin-left: -16px
-  border-right: 1px sold  hsla(214, 18%, 70%, 1)!important
+  height: 100%
+  width: 14.5%
+  border-right: 1px solid hsla(214, 18%, 80%, 1)
+
+.row-fluid-admin
+  position: absolute
+  height: 100%
+
+
+.span10-main
+  height: 100%
+  overflow-y: auto
+  padding-right: 10px
+  padding-bottom: 80px
 
 $action_start: hsl(0, 0%, 96%)
 $action_end: hsl(0, 0%, 88%)
@@ -84,9 +106,9 @@ div.page-header
   margin-bottom: 10px
   padding-bottom: 5px
   h1
-    font-size: 18px
+    font-size: 15px
     color: hsla(0, 0%, 47%, 1)
-    font-weight: bold
+    font-weight: 700
     margin: 0px
 
 .btn-primary

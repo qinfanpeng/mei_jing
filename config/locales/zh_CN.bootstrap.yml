@@ -55,3 +55,8 @@ zh_CN:
     banned_bin: 屏蔽箱
     published_bin: 发布箱
     detail: 文章详情
+    banneds: 已屏蔽文章
+    publisheds: 已发布文章
+    drafteds: 已起草文章
+    new: 写文章
+    edit: 修改文章

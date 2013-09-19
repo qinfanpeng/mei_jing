@@ -1,6 +1,6 @@
 - model_class = Article
 div class="page-header"
-  h1=t 'article.all'
+  = smart_h1(controller.action_name)
 
 = form_tag '#', id: 'article_batch_form' do |f|
 

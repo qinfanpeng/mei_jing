@@ -1,3 +1,4 @@
+@import 'bootstrap_and_overrides'
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -19,3 +20,16 @@
     margin-right: 20px
 .classify_form
   display: inline
+
+ul.nav-list
+  padding-top: 10px
+  li
+    a.current
+      color: white
+      @include gradient(hsla(213, 32%, 27%, 1), hsla(213, 32%, 20%, 1))
+
+    a.current:hover
+      background-color: hsla(213, 32%, 27%, 1)
+
+    a:hover
+      background-color: hsla(214, 18%, 85%, 1)

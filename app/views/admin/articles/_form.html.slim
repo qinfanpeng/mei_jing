@@ -35,4 +35,4 @@
     -else
       = f.submit t('article.update'), :class => 'btn btn-primary'
     = f.submit t('article.draft'), class: 'btn', id: 'draft_btn'
-    = link_to t('.cancel', :default => t("helpers.links.cancel")), admin_articles_path, :class => 'btn'
+    = link_to t("helpers.links.cancel"), :back, :class => 'btn'

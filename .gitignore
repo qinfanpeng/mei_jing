@@ -4,6 +4,6 @@ log/
 test/
 tmp/
 public/
-solr.bak/data
 sunspot_solr_mmseg4j/solr/data
+solr.bak/
 

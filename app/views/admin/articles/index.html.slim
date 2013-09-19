@@ -4,11 +4,11 @@ div class="page-header"
 
 = form_tag '#', id: 'article_batch_form' do |f|
 
-  = render 'btn_toolbar_batch', columns: all_columns
+  = render 'btn_toolbar_batch', columns: all_columns, articles: @articles
 
-  table class="table table-striped table-hover table-condensed table-bordered" id="table-admin"
+  table class="table table-striped table-hover table-condensed table-bordered table-admin"
     thead
-      tr.success
+      tr
         th= check_box_tag("article[check_all]", 'true', false)
         th= t('article.title')
         th= t('article.digest')
@@ -20,11 +20,11 @@ div class="page-header"
       - @articles.each do |article|
         tr
           td= check_box_tag('ids[]', article.id, false, class: 'article_ids')
-          td= link_to truncate(article.title), admin_article_path(article)
+          td= link_to truncate(article.title, length: 10), admin_article_path(article)
           td= truncate article.digest, length: 50
           td= article.publisher
           td= t("article.#{article.status}")
           td= (article.columns.map {|column| column.name}).join(',')
           td= l article.created_at
 
-  = render 'btn_toolbar_batch', columns: all_columns
+  = render 'btn_toolbar_batch', columns: all_columns, articles: @articles

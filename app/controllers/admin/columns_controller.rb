@@ -3,7 +3,7 @@ class Admin::ColumnsController < ApplicationController
   # GET /admin/columns.json
   layout 'admin'
   def index
-    @columns = Column.all
+    @columns = Column.paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

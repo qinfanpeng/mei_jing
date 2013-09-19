@@ -3,7 +3,7 @@ class Admin::ArticlesController < ApplicationController
 
   layout 'admin'
   def index
-    @articles = Article.all
+    @articles = Article.paginate(:page => params[:page])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articles }
@@ -46,23 +46,21 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def drafted
-    @articles = Article.where(status: 'drafted')
+    @articles = Article.where(status: 'drafted').paginate(:page => params[:page])
     render :index
   end
 
   def banned
-    @articles = Article.where(status: 'banned')
+    @articles = Article.where(status: 'banned').paginate(:page => params[:page])
     render :index
   end
 
   def published
-    @articles = Article.where(status: 'published')
+    @articles = Article.where(status: 'published').paginate(:page => params[:page])
     render :index
   end
 
   def update
-    p "------"
-    p params[:article][:column_ids]
     @article = Article.find(params[:id])
     respond_to do |format|
       if @article.update_attributes(params[:article])# and

@@ -17,3 +17,5 @@
       li= link_to t('helpers.ok'), batch_classify_admin_articles_path, class: 'classify_batch_ok'
 
   = link_to t('article.publish'), batch_publish_admin_articles_path, class: 'btn btn-mini btn-success', method: 'post'
+
+  = will_paginate articles

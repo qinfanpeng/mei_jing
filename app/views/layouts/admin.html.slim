@@ -42,6 +42,11 @@ html lang="en"
                 = link_to t('article.banned_bin'), banned_admin_articles_path, class: 'current'
               li= link_to_unless_current t('article.published_bin'), published_admin_articles_path do
                 = link_to t('article.published_bin'), published_admin_articles_path, class:'current'
+              li.divider
+              li= link_to_unless_current t('column.admin'), admin_columns_path do
+                = link_to t('column.admin'), admin_columns_path, class:'current'
+
+
         .span10.span10-main
           = bootstrap_flash
           = yield

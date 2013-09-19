@@ -28,7 +28,11 @@ zh_CN:
     messages:
       blank: 不能为空
       too_long: 太长(最多不超过100字)
+      taken: 已被占用
 
+  will_paginate:
+    previous_label: '上一页'
+    next_label: '下一页'
 
   article:
     title: 标题
@@ -60,3 +64,13 @@ zh_CN:
     drafteds: 已起草文章
     new: 写文章
     edit: 修改文章
+
+  column:
+    admin: 栏目管理
+    all: 所有栏目
+    name: 名称
+    created_at: 创建时间
+    detail: 栏目详情
+    new: 新建栏目
+    create: 保存栏目
+    edit: 修改栏目

@@ -51,7 +51,7 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def banned
-    @articles = Article.where(status: 'banned').paginate(:page => params[:page])
+    @articles = Article.where(status: 'banned').paginate(page: params[:page])
     render :index
   end
 
@@ -133,8 +133,11 @@ class Admin::ArticlesController < ApplicationController
 
   def search
     search = Article.search do
-      #fulltext params[:query].to_s
-      fulltext params[:query]
+      fulltext params[:query] do
+        boost_fields :title => 2.0
+      end
+      order_by :created_at, :desc
+      paginate page: params[:page] || 1, per_page: 10
     end
     @articles = search.results
     render :index

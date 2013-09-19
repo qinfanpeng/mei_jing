@@ -17,7 +17,7 @@ MeiJing::Application.routes.draw do
         get :drafted
         get :banned
         get :published
-        post :search
+        get :search
         post :batch_ban
         post :batch_destroy
         post :batch_draft

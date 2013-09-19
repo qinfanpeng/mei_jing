@@ -24,7 +24,7 @@ html lang="en"
           =link_to t('helpers.mei_jing_admin'), '#', class: 'brand'
           .container-fluid.nav-collapse
             /ul.nav
-            =form_tag search_admin_articles_path, class: 'navbar-form pull-right' do |f|
+            =form_tag search_admin_articles_path, class: 'navbar-form pull-right', method: 'get' do |f|
               input placeholder="文章全文搜索" name="query"
 
     .container-fluid.container-fluid-admin

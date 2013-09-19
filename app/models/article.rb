@@ -8,10 +8,13 @@ class Article < ActiveRecord::Base
   has_and_belongs_to_many :columns
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>", large: '450x450>' }
 
-  self.per_page = 10
+  self.per_page = 12
 
   searchable do
     text :content, :digest, :publisher, :title
     time :created_at, :updated_at
+    text :columns do
+      columns.map { |column| column.name }
+    end
   end
 end

@@ -9,6 +9,7 @@ module ArticlesHelper
     when 'banned' then content_tag :h1, t('article.banneds')
     when 'drafted' then content_tag :h1, t('article.drafteds')
     when 'published' then content_tag :h1, t('article.publisheds')
+    when 'search' then content_tag :h1, t('article.searches')
     else
       content_tag :h1, t('article.all')
     end

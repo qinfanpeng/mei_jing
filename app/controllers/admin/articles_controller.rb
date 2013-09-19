@@ -46,17 +46,17 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def drafted
-    @articles = Article.where(status: 'drafted').paginate(:page => params[:page])
+    @articles = Article.drafted.paginate(:page => params[:page])
     render :index
   end
 
   def banned
-    @articles = Article.where(status: 'banned').paginate(page: params[:page])
+    @articles = Article.banned.paginate(page: params[:page])
     render :index
   end
 
   def published
-    @articles = Article.where(status: 'published').paginate(:page => params[:page])
+    @articles = Article.published.paginate(:page => params[:page])
     render :index
   end
 

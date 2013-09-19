@@ -2,7 +2,7 @@ class Article < ActiveRecord::Base
   attr_accessible :content, :digest, :image, :publisher, :status, :title, :column_ids
 
   validates_presence_of :title, :digest, :content, :publisher, :column_ids, :status
-  validates :digest, length: { maximum: 100 }
+  validates :digest, length: { maximum: 300 }
   validates :status, inclusion: %w[drafted published banned]
 
   has_and_belongs_to_many :columns
@@ -17,4 +17,9 @@ class Article < ActiveRecord::Base
       columns.map { |column| column.name }
     end
   end
+
+  scope :banned, -> { where(status: 'banned') }
+  scope :drafted, -> { where(status: 'drafted') }
+  scope :published, -> { where(status: 'published') }
+  default_scope { order('created_at desc') }
 end

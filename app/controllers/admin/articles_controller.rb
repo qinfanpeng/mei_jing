@@ -131,6 +131,15 @@ class Admin::ArticlesController < ApplicationController
     redirect_to :back
   end
 
+  def search
+    search = Article.search do
+      #fulltext params[:query].to_s
+      fulltext params[:query]
+    end
+    @articles = search.results
+    render :index
+  end
+
   private
   def batch_action(ids, action)
     ids.each do |id|

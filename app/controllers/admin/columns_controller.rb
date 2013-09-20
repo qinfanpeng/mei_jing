@@ -1,6 +1,5 @@
 class Admin::ColumnsController < ApplicationController
-  # GET /admin/columns
-  # GET /admin/columns.json
+
   layout 'admin'
   def index
     @columns = Column.paginate(:page => params[:page])
@@ -81,4 +80,6 @@ class Admin::ColumnsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 end

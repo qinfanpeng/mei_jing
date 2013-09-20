@@ -3,6 +3,7 @@ div class="page-header"
   h1= t('article.detail')
 
 = render 'btn_toolbar_detail', columns: all_columns, article: @article
+
 table.table-detail
   tr
     th= t('article.title') + ':'
@@ -25,6 +26,8 @@ table.table-detail
 
 center= image_tag @article.image.url(:large), id: 'large_image'
 
-= raw @article.content
+- cache(:article_content) do
+  = raw @article.content
+
 
 = render 'btn_toolbar_detail', columns: all_columns, article: @article

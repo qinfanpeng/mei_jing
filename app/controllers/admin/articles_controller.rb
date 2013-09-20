@@ -1,21 +1,36 @@
 # -*- coding: utf-8 -*-
+require 'colorize'
+
 class Admin::ArticlesController < ApplicationController
+  before_filter :expire_fragments, only: [:update]
+  before_filter :expire_actions, only: [:create, :destroy, :update, :ban, :draft, :publish, :batch_ban, :batch_draft, :batch_publish]
+
+  caches_action :index, cache_path: Proc.new { |c| {page: c.params[:page]}  }
+  caches_action :drafted, cache_path: Proc.new { |c| {page: c.params[:page] } }
+  caches_action :banned, cache_path: Proc.new { |c| {page:c.params[:page]} }
+  caches_action :published, cache_path: Proc.new { |c| {page: c.params[:page]} }
 
   layout 'admin'
+
   def index
-    @articles = Article.paginate(:page => params[:page])
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @articles }
+    @articles = Article.includes(:columns)
+      .paginate(:page => params[:page])
+
+    if stale?(:last_modified => @articles.last.updated_at.utc, :etag => @articles.last)
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @articles }
+      end
     end
   end
 
   def show
     @article = Article.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @article }
+    if stale?(:last_modified => @article.updated_at.utc, :etag => @article)
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @article }
+      end
     end
   end
 
@@ -46,22 +61,29 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def drafted
-    @articles = Article.drafted.paginate(:page => params[:page])
+    puts '----drafted----'.green
+    @articles = Article.drafted.includes(:columns)
+      .paginate(:page => params[:page])
     render :index
   end
 
   def banned
-    @articles = Article.banned.paginate(page: params[:page])
+    puts '----banned----'.green
+    @articles = Article.banned.includes(:columns)
+      .paginate(page: params[:page])
     render :index
   end
 
   def published
-    @articles = Article.published.paginate(:page => params[:page])
+    puts '----published----'.green
+    @articles = Article.published.includes(:columns)
+      .paginate(:page => params[:page])
     render :index
   end
 
   def update
     @article = Article.find(params[:id])
+
     respond_to do |format|
       if @article.update_attributes(params[:article])# and
         format.html { redirect_to [:admin, @article], notice: 'Article was successfully updated.' }
@@ -172,5 +194,16 @@ class Admin::ArticlesController < ApplicationController
   def publish_article(id)
     @article = Article.find(id)
     @article.update_attributes({status: 'published'})
+  end
+
+  def expire_fragments
+    [:article_content].each do |fragment|
+      expire_fragment fragment
+    end
+  end
+
+  def expire_actions
+    cache_path = /.*\/admin\/articles(|\/published|\/drafted|\/banned)(|\?page=\d+)$/
+    expire_fragment(cache_path)
   end
 end

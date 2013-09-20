@@ -3,6 +3,7 @@
   = link_to t("helpers.links.destroy"), batch_destroy_admin_articles_path, :method => "delete", data: { confirm: t("helpers.links.confirm") }, class: 'btn btn-danger btn-mini'
   = link_to t('article.draft'), batch_draft_admin_articles_path, class: 'btn btn-mini', method: 'post'
   = link_to t('article.ban'), batch_ban_admin_articles_path, class: 'btn btn-mini btn-warning', method: 'post'
+
   .btn-group
     button.btn.btn-mini.dropdown-toggle data-toggle= "dropdown"
       = t('article.classify')

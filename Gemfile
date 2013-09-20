@@ -28,3 +28,7 @@ end
 group :test do
   gem 'rspec-rails', '2.11.0'
 end
+
+# Just for commandline tip output.
+gem "colorize", "~> 0.5.8"
+gem 'progress_bar'

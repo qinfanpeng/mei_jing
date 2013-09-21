@@ -66,6 +66,9 @@ zh_CN:
     edit: 修改文章
     searches: 搜索结果
     preview: 预览
+    flash:
+      create:
+        success: 文章发布成功
 
   column:
     admin: 栏目管理

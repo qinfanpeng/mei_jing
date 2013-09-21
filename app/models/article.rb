@@ -22,4 +22,5 @@ class Article < ActiveRecord::Base
   scope :drafted, -> { where(status: 'drafted') }
   scope :published, -> { where(status: 'published') }
   default_scope { order('created_at desc') }
+  #default_scope { order("convert(title USING GBK)")}
 end

@@ -49,7 +49,7 @@ class Admin::ArticlesController < ApplicationController
     @article = Article.new(params[:article])
     respond_to do |format|
       if @article.save #and
-        format.html { redirect_to [:admin, @article], notice: 'Article was successfully created.' }
+        format.html { redirect_to [:admin, @article], notice: t('article.flash.create.success') }
         format.json { render json: @article, status: :created, location: @article }
       else
         format.html { render action: "new" }

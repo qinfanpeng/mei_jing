@@ -17,7 +17,7 @@ gem 'rails_kindeditor', '~> 0.4.0'
 gem "paperclip", "~> 3.0"
 
 gem 'sunspot_rails'
-gem 'sunspot_solr'
+#gem 'sunspot_solr'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -26,9 +26,16 @@ group :assets do
 end
 
 group :test do
-  gem 'rspec-rails', '2.11.0'
+  gem 'rspec-rails', "~> 2.14.0"
+  gem 'capybara', "~> 2.1.0"
+end
+
+group :development do
+
 end
 
 # Just for commandline tip output.
 gem "colorize", "~> 0.5.8"
 gem 'progress_bar'
+
+gem 'zeus'

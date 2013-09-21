@@ -31,11 +31,12 @@ group :test do
 end
 
 group :development do
-
+  gem 'zeus'
+end
+group :test, :development do
+  gem "factory_girl_rails", "~> 4.2.1"
 end
 
 # Just for commandline tip output.
 gem "colorize", "~> 0.5.8"
 gem 'progress_bar'
-
-gem 'zeus'

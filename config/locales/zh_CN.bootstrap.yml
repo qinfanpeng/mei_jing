@@ -69,6 +69,10 @@ zh_CN:
     flash:
       create:
         success: 文章发布成功
+        error: 文章发布失败
+      update:
+        success: 文章更新成功
+        error: 文章更新失败
 
   column:
     admin: 栏目管理

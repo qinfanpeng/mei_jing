@@ -52,6 +52,7 @@ class Admin::ArticlesController < ApplicationController
         format.html { redirect_to [:admin, @article], notice: t('article.flash.create.success') }
         format.json { render json: @article, status: :created, location: @article }
       else
+        flash[:error] = t('article.flash.create.error')
         format.html { render action: "new" }
         format.json { render json: @article.errors, status: :unprocessable_entity }
       end
@@ -81,12 +82,13 @@ class Admin::ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    expire_fragment :article_content
+
     respond_to do |format|
       if @article.update_attributes(params[:article])# and
-        format.html { redirect_to [:admin, @article], notice: 'Article was successfully updated.' }
+        format.html { redirect_to [:admin, @article], notice: t('article.flash.update.success') }
         format.json { head :no_content }
       else
+        flash[:error] = t('article.flash.update.error')
         format.html { render action: "edit" }
         format.json { render json: @article.errors, status: :unprocessable_entity }
       end

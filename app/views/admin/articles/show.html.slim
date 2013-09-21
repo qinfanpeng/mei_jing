@@ -26,8 +26,6 @@ table.table-detail
 - if has_image_for?(@article)
   center= image_tag @article.image.url(:large), id: 'large_image'
 
-- cache(:article_content) do
-  = raw @article.content
-
+= raw @article.content
 
 = render 'btn_toolbar_detail', columns: all_columns, article: @article

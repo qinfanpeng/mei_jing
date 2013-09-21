@@ -1,6 +1,8 @@
 class Admin::ColumnsController < ApplicationController
 
   layout 'admin'
+
+  after_filter :expire_column_framents, only: [:create, :update, :destroy]
   def index
     @columns = Column.paginate(:page => params[:page])
 
@@ -81,5 +83,9 @@ class Admin::ColumnsController < ApplicationController
     end
   end
 
+  private
+  def expire_column_framents
+    expire_fragment :columns
+  end
 
 end

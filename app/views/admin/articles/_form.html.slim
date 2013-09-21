@@ -25,7 +25,7 @@
   .control-group
     = f.label t('article.content'), :class => 'control-label', for: 'article_content'
     .controls
-      = f.kindeditor :content, width: 850, height: 400, simple_mode: true
+      = f.kindeditor :content, width: 800, height: 400, simple_mode: true, window_onload: true
       = f.hidden_field :status, value: 'published'
 
 

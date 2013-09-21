@@ -1,0 +1,88 @@
+@import 'bootstrap_and_overrides'
+
+#article_title
+  width: 350px
+
+#article_digest
+  width: 550px
+
+#article_content
+  width: 850px
+  height: 400px
+
+.column_ids_controls
+  padding-top: 5px
+  > *
+    float: left
+    margin-right: 20px
+.classify_form
+  display: inline
+
+ul.nav-list
+  padding-top: 10px
+  li
+    a.current
+      color: white
+      @include gradient(hsla(213, 32%, 27%, 1), hsla(213, 32%, 20%, 1))
+
+    a.current:hover
+      background-color: hsla(213, 32%, 27%, 1)
+
+    a:hover
+      background-color: hsla(214, 18%, 85%, 1)
+
+body#body-admin
+  overflow: hidden
+
+#admin-sidebar-nav
+  position: absolute
+  background-color: hsla(214, 18%, 92%, 1)
+  height: 100%
+  width: 14.5%
+  border-right: 1px solid hsla(214, 18%, 80%, 1)
+
+.row-fluid-admin
+  position: absolute
+  height: 100%
+
+
+.span10-main
+  height: 100%
+  overflow-y: auto
+  padding-right: 10px
+  padding-bottom: 80px
+
+$action_start: hsl(0, 0%, 96%)
+$action_end: hsl(0, 0%, 88%)
+.form-actions-admin
+  @include gradient($action_start, $action_end)
+  margin-top: 5px
+  margin-bottom: 0px
+  padding: 7px 10px
+  border-bottom: 1px solid hsla(210, 55%, 99%, 1)
+  div, a
+    margin-right: 8px
+  .btn-group
+    ul.dropdown-menu-admin
+      li
+
+
+
+.table-admin
+  thead
+    background-color: hsla(210, 55%, 96%, 1)
+    tr
+      th
+        font-weight: normal
+
+.table-detail
+  background-color: hsla(210, 55%, 96%, 1)
+  width: 100%
+  tr
+    th
+      text-align: right
+      font-weight: bold
+      width: 60px
+      vertical-align: top
+    td
+      padding-left: 5px

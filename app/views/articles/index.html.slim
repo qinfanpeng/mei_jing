@@ -1,0 +1,19 @@
+- model_class = Article
+div class="page-header"
+  /= smart_h1(controller.action_name)
+
+- @articles.each do |article|
+  article.article-digest
+      h1
+        = link_to truncate(article.title, length: 20), article_path(article)
+      time = l article.created_at
+      .image_digest
+        - if has_image_for?(article)
+          = link_to (image_tag article.image.url(:thumb), class: 'thumbs pull-left'), article_path(article)
+          p.with_image = truncate article.digest, length: 200
+        -else
+          p = truncate article.digest, length: 200
+
+
+
+= will_paginate @articles

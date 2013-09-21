@@ -1,35 +1,41 @@
 @import 'bootstrap_and_overrides'
-// Place all the styles related to the articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
-#article_title
-  width: 350px
-
-#article_digest
-  width: 550px
-
-#article_content
-  width: 850px
-  height: 400px
-
-.column_ids_controls
-  padding-top: 5px
-  > *
-    float: left
-    margin-right: 20px
-.classify_form
-  display: inline
-
-ul.nav-list
-  padding-top: 10px
-  li
-    a.current
-      color: white
-      @include gradient(hsla(213, 32%, 27%, 1), hsla(213, 32%, 20%, 1))
-
-    a.current:hover
-      background-color: hsla(213, 32%, 27%, 1)
-
+article.article-digest
+  border-bottom: 1px solid hsla(0, 0%, 90%, 1)
+  padding-bottom: 5px
+  h1
+    font-weight: normal
+    font-size: 17px
+    margin-bottom: -5px
+    margin-top: 2px
+    padding: 0px 0px
+    clear: both
     a:hover
-      background-color: hsla(214, 18%, 85%, 1)
+      background-color: #F5F5F5
+      color: #52a8ec
+      margin: 0px 0px
+
+  time
+    margin-top: 0px
+    color: hsla(0, 0%, 80%, 1)
+
+  .image_digest
+    img.thumbs
+      margin: 3px 4px
+    p
+      color: hsla(0, 0%, 55%, 1)
+    p.with_image
+      min-height: 55px
+
+article.article-detail
+  header
+    text-align: center
+    h1
+      font-size: 20px
+      margin-bottom: -5px
+    time
+      color: hsla(0, 0%, 60%, 1)
+  section
+    p.digest
+    img
+      margin-bottom: 30px

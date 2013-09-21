@@ -15,12 +15,10 @@ class Admin::ArticlesController < ApplicationController
   def index
     @articles = Article.includes(:columns)
       .paginate(:page => params[:page])
-
-    if stale?(:last_modified => @articles.last.updated_at.utc, :etag => @articles.last)
-      respond_to do |format|
-        format.html # index.html.erb
-        format.json { render json: @articles }
-      end
+    puts request.fullpath.green
+    respond_to do |format|
+      format.html
+      format.json { render json: @articles }
     end
   end
 
@@ -28,7 +26,7 @@ class Admin::ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     if stale?(:last_modified => @article.updated_at.utc, :etag => @article)
       respond_to do |format|
-        format.html # show.html.erb
+        format.html
         format.json { render json: @article }
       end
     end
@@ -83,7 +81,7 @@ class Admin::ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-
+    expire_fragment :article_content
     respond_to do |format|
       if @article.update_attributes(params[:article])# and
         format.html { redirect_to [:admin, @article], notice: 'Article was successfully updated.' }
@@ -203,7 +201,9 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def expire_actions
-    cache_path = /.*\/admin\/articles(|\/published|\/drafted|\/banned)(|\?page=\d+)$/
-    expire_fragment(cache_path)
+    admin_cache_path = /.*\/admin\/articles(|\/published|\/drafted|\/banned)(|\?page=\d+)$/
+    foreground_cache_path = /.*(|columns\/\d+)\/articles(|\?page=\d+)$/
+    expire_fragment(admin_cache_path)
+    expire_fragment(foreground_cache_path)
   end
 end

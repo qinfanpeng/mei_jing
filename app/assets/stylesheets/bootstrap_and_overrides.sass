@@ -19,19 +19,37 @@
   background-image: -webkit-linear-gradient(top, $start_color, $end_color)
   background-image: linear-gradient(top, $start_color, $end_color)
 
-$start_color: hsla(198, 100%, 60%, 1)
-$end_color: hsla(198, 100%, 48%, 1)
+$start_color: hsla(207, 80%, 47%, 1)
+$end_color: hsla(207, 80%, 42%, 1)
+
 $admin_start_color: hsla(213, 32%, 27%, 1)
 $admin_end_color: hsla(213, 32%, 15%, 1)
 
+body
+  font-family: 宋体, serif
+
 .navbar-inner
   @include gradient($start_color, $end_color)
-  height: 46px
-  padding-top: 7px
-  a
-    color: white !important
-    &:hover
-      background-color: hsla(198, 100%, 40%, 1) !important
+  padding: 5px 10px
+  .container-fluid
+    .btn-navbar
+      @include gradient(hsla(207, 80%, 44%, 1) , hsla(207, 80%, 38%, 1) )
+      border: 1px solid hsla(207, 80%, 35%, 1)
+    .btn-navbar:hover
+      @include gradient(hsla(207, 80%, 38%, 1), hsla(207, 80%, 44%, 1))
+      background-color: hsla(207, 80%, 44%, 1)
+    ul
+      li
+        a
+          color: white !important
+          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+        a:hover
+          text-decoration: underline !important
+    .in.collapse
+      ul
+        li
+          a:hover
+            background-color: hsla(207, 80%, 38%, 1)
 
 .navbar-inner-admin
   height: 60px
@@ -41,65 +59,9 @@ $admin_end_color: hsla(213, 32%, 15%, 1)
   margin-bottom: 0px
 
 
-
-
 .container-fluid-admin
   padding: 0px 5px 5px 5px
   margin-top: 0px
-
-body
-  overflow: hidden
-
-#admin-sidebar-nav
-  position: absolute
-  background-color: hsla(214, 18%, 92%, 1)
-  height: 100%
-  width: 14.5%
-  border-right: 1px solid hsla(214, 18%, 80%, 1)
-
-.row-fluid-admin
-  position: absolute
-  height: 100%
-
-
-.span10-main
-  height: 100%
-  overflow-y: auto
-  padding-right: 10px
-  padding-bottom: 80px
-
-$action_start: hsl(0, 0%, 96%)
-$action_end: hsl(0, 0%, 88%)
-.form-actions-admin
-  @include gradient($action_start, $action_end)
-  margin-top: 5px
-  margin-bottom: 0px
-  padding: 7px 10px
-  border-bottom: 1px solid hsla(210, 55%, 99%, 1)
-  div, a
-    margin-right: 8px
-  .btn-group
-    ul.dropdown-menu-admin
-      li
-
-
-
-.table-admin
-  thead
-    background-color: hsla(210, 55%, 96%, 1)
-    tr
-      th
-        font-weight: normal
-
-.table-detail
-  background-color: hsla(210, 55%, 96%, 1)
-  width: 100%
-  tr
-    th
-      text-align: right
-      font-weight: bold
-    td
-      padding-left: 5px
 
 div.page-header
   margin-top: 0px
@@ -118,7 +80,8 @@ div.page-header
 a.brand
   &:hover
     background-color: hsla(198, 100%, 40%, 1)
-
+    font-weight: bold
+    text-shadow: 0 1px 0 hsla(0, 100%, 100%, 0.1), 0 0 30px hsla(0, 100%, 100%, 0.125)
 table
   tr
     th

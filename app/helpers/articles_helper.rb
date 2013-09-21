@@ -14,4 +14,8 @@ module ArticlesHelper
       content_tag :h1, t('article.all')
     end
   end
+
+  def has_image_for?(article)
+    not article.image.url(:thumb) =~ /missing.png$/
+  end
 end

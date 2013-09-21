@@ -1,11 +1,12 @@
 MeiJing::Application.routes.draw do
+  #root to: 'articles#index'
+  match '' => redirect('/articles')
   namespace :admin do
     resources :columns
   end
 
-
   namespace :admin do
-    resources :articles do
+    resources :articles,:path_names => { :new => 'write'} do
       member do
         post :ban
         post :draft
@@ -27,9 +28,17 @@ MeiJing::Application.routes.draw do
     end
   end
 
-  scope :module => "admin" do
-    resources :articles, only: [:index, :show]
-  end
+  #scope :module => "admin" do
+   # resources :articles, only: [:index, :show]
+  #end
+
+  #resources :columns do
+   # resources :articles, only: [:index, :show]
+  #end
+
+  resources :articles, only: [:index, :show]
+
+  match "/columns/:id/articles", to: "articles#belong_to_column"
 
 
   # The priority is based upon order of creation:
@@ -81,7 +90,7 @@ MeiJing::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+
 
   # See how all your routes lay out with "rake routes"
 

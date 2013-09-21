@@ -23,8 +23,8 @@ table.table-detail
   tr
     th= t('article.digest') + ':'
     td= @article.digest
-
-center= image_tag @article.image.url(:large), id: 'large_image'
+- if has_image_for?(@article)
+  center= image_tag @article.image.url(:large), id: 'large_image'
 
 - cache(:article_content) do
   = raw @article.content

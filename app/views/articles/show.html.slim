@@ -1,0 +1,15 @@
+- model_class = Article
+div class="page-header"
+  /h1= t('article.detail')
+
+article.article-detail
+  header
+    h1 = @article.title
+    time = l @article.created_at
+  section
+    p.digest.well
+      strong 核心提示：
+      = @article.digest
+    center
+      = image_tag @article.image.url(:large), id: 'large_image'
+    = raw @article.content

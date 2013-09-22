@@ -2,12 +2,16 @@
 require 'colorize'
 
 p "----create columns---------------"
-Column.delete_all
+columns = [
+  {name: '行情'},
+  {name: '个股'}
+]
 
-Column.create!([
-    {name: '行情'},
-    {name: '个股'}
-  ])
+columns.each do |attr|
+  Column.find_or_initialize_by_name(attr[:name]).tap do |column|
+    column.save!
+  end
+end
 puts "-----2 clumns successfuly added----".green
 
 p "----create articles---------------"
@@ -31,9 +35,9 @@ Article.create!({
     status: 'published'
     })
 
-20.times do |i|
+11.times do |i|
   Article.create!({
-      column_ids: [first_column_id],
+      column_ids: column_ids.sample,
       publisher: '张三',
       title: "标题-#{i}",
       digest: "摘要-#{i}",

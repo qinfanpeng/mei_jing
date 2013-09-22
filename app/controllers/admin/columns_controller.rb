@@ -1,91 +1,48 @@
 class Admin::ColumnsController < ApplicationController
 
   layout 'admin'
+  respond_to :html, :json
 
   after_filter :expire_column_framents, only: [:create, :update, :destroy]
+  before_filter :get_column, only: [:show, :edit, :update, :destroy]
   def index
     @columns = Column.paginate(:page => params[:page])
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @columns }
-    end
+    respond_with(@columns)
   end
 
-  # GET /admin/columns/1
-  # GET /admin/columns/1.json
   def show
-    @column = Column.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @column }
-    end
+    respond_with(@column)
   end
-
-  # GET /admin/columns/new
-  # GET /admin/columns/new.json
   def new
     @column = Column.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @column }
-    end
+    respond_with(@column)
   end
 
-  # GET /admin/columns/1/edit
   def edit
-    @column = Column.find(params[:id])
   end
 
-  # POST /admin/columns
-  # POST /admin/columns.json
   def create
     @column = Column.new(params[:column])
-
-    respond_to do |format|
-      if @column.save
-        format.html { redirect_to [:admin, @column], notice: 'Column was successfully created.' }
-        format.json { render json: @column, status: :created, location: @column }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @column.errors, status: :unprocessable_entity }
-      end
-    end
+    flash[:notice] = 'Column was successfully created.' if @column.save
+    respond_with(@column)
   end
 
-  # PUT /admin/columns/1
-  # PUT /admin/columns/1.json
   def update
-    @column = Column.find(params[:id])
-
-    respond_to do |format|
-      if @column.update_attributes(params[:column])
-        format.html { redirect_to [:admin, @column], notice: 'Column was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @column.errors, status: :unprocessable_entity }
-      end
-    end
+    flash[:notice] = 'Column was successfully updated.' if @column.update_attributes(params[:column])
+    respond_with(@column)
   end
 
-  # DELETE /admin/columns/1
-  # DELETE /admin/columns/1.json
   def destroy
-    @column = Column.find(params[:id])
     @column.destroy
-
-    respond_to do |format|
-      format.html { redirect_to admin_columns_url }
-      format.json { head :no_content }
-    end
+    respond_with(@column)
   end
 
   private
   def expire_column_framents
     expire_fragment :columns
+  end
+  def get_column
+    @column = Column.find(params[:id])
   end
 
 end

@@ -1,6 +1,6 @@
-- model_class = Article
+- content_for(:title) { smart_h1(controller.action_name) }
 div class="page-header"
-  = smart_h1(controller.action_name)
+  h1= smart_h1(controller.action_name)
 
 = form_tag '#', id: 'article_batch_form' do |f|
 

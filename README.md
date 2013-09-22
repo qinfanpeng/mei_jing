@@ -2,6 +2,8 @@ mei_jing
 ========
 
 The homework of mei_jing's interview
+### 相关说明
+####
 
 #### 全文搜索引擎sunspot配合独立solr使用相关步骤
 1. 运行根目录下的 install.sh，会在本目录下面生成一个sunspot_solr_mmseg4j目录(这里包括了jetty，solr的war文件，以及mmseg4j的集成).

@@ -6,12 +6,12 @@ module ArticlesHelper
 
   def smart_h1(action_name)
     case action_name
-    when 'banned' then content_tag :h1, t('article.banneds')
-    when 'drafted' then content_tag :h1, t('article.drafteds')
-    when 'published' then content_tag :h1, t('article.publisheds')
-    when 'search' then content_tag :h1, t('article.searches')
+    when 'banned' then t('article.banneds')
+    when 'drafted' then  t('article.drafteds')
+    when 'published' then  t('article.publisheds')
+    when 'search' then t('article.searches')
     else
-      content_tag :h1, t('article.all')
+      t('article.all')
     end
   end
 

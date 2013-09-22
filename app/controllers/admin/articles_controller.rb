@@ -5,10 +5,10 @@ class Admin::ArticlesController < ApplicationController
   before_filter :expire_actions, only: [:create, :destroy, :update, :ban, :draft, :publish, :batch_ban, :batch_draft, :batch_publish, :classify, :batch_classify]
   before_filter :get_article, only: [:show, :edit, :update, :destroy, :ban, :draft, :publish, :classify]
 
-  #caches_action :index, cache_path: Proc.new { |c| {page: c.params[:page]}  }
-  #caches_action :drafted, cache_path: Proc.new { |c| {page: c.params[:page] } }
-  #caches_action :banned, cache_path: Proc.new { |c| {page:c.params[:page]} }
-  #caches_action :published, cache_path: Proc.new { |c| {page: c.params[:page]} }
+  caches_action :index, cache_path: Proc.new { |c| {page: c.params[:page]}  }
+  caches_action :drafted, cache_path: Proc.new { |c| {page: c.params[:page] } }
+  caches_action :banned, cache_path: Proc.new { |c| {page:c.params[:page]} }
+  caches_action :published, cache_path: Proc.new { |c| {page: c.params[:page]} }
 
   respond_to :html, :json
   layout 'admin'

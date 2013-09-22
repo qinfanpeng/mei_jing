@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130917115132) do
+ActiveRecord::Schema.define(:version => 20130922140429) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(:version => 20130917115132) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
+
+  add_index "articles", ["status", "title", "created_at"], :name => "index_articles_on_status_and_title_and_created_at"
 
   create_table "articles_columns", :force => true do |t|
     t.integer "column_id"

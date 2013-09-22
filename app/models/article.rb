@@ -23,4 +23,7 @@ class Article < ActiveRecord::Base
   scope :published, -> { where(status: 'published') }
   default_scope { order('created_at desc') }
 
+  def to_param
+    "#{id}-#{title}"
+  end
 end

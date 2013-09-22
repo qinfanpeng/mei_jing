@@ -18,7 +18,8 @@ p "----create articles---------------"
 Article.delete_all
 
 status_a = %w[published banned drafted]
-column_ids = %w[Column.first.id, Column.last.id]
+first_column_id = Column.first.id
+last_column_id = Column.last.id
 
 a_real_digest = <<END
 投资者可以在十一月份的改革红利的利好兑现前，在操作上面可以更加的积极。特别是对于一些与改革
@@ -37,7 +38,7 @@ Article.create!({
 
 11.times do |i|
   Article.create!({
-      column_ids: column_ids.sample,
+      column_ids: [first_column_id],
       publisher: '张三',
       title: "标题-#{i}",
       digest: "摘要-#{i}",

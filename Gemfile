@@ -17,7 +17,7 @@ gem 'rails_kindeditor', '~> 0.4.0'
 gem "paperclip", "~> 3.0"
 
 gem 'sunspot_rails'
-#gem 'sunspot_solr'
+gem 'thin'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

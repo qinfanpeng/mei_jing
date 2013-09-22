@@ -2,9 +2,9 @@
 .form-actions-admin
   = link_to t("helpers.links.back"), :back, :class => 'btn btn-mini'
   = link_to t("helpers.links.edit"), edit_admin_article_path(article), :class => 'btn btn-mini'
-  = link_to t("helpers.links.destroy"), admin_article_path(article), :method => "delete", data: { confirm: t("helpers.links.confirm") }, class: 'btn btn-danger btn-mini'
-  = link_to t('article.draft'), draft_admin_article_path(article), class: 'btn btn-mini', method: 'post'
-  = link_to t('article.ban'), ban_admin_article_path, class: 'btn btn-mini btn-warning', method: 'post'
+  = button_to t("helpers.links.destroy"), admin_article_path(article), :method => "delete", data: { confirm: t("helpers.links.confirm") }, class: 'btn btn-danger btn-mini'
+  = button_to t('article.draft'), draft_admin_article_path(article), class: 'btn btn-mini'
+  = button_to t('article.ban'), ban_admin_article_path, class: 'btn btn-mini btn-warning'
 
   = form_tag classify_admin_article_path(article), class: 'classify_form' do |f|
     .btn-group
@@ -20,5 +20,5 @@
         li.divider
         li= link_to t('helpers.ok'), '', class: 'classify_ok'
 
-  = link_to t('article.publish'), publish_admin_article_path, class: 'btn btn-mini btn-success', method: 'post'
+  = button_to t('article.publish'), publish_admin_article_path, class: 'btn btn-mini btn-success'
   = link_to t('article.preview'), article_path(article), class: 'btn btn-mini'

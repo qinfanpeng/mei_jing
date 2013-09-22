@@ -1,8 +1,8 @@
 
 .form-actions-admin.form-actions-batch
-  = link_to t("helpers.links.destroy"), batch_destroy_admin_articles_path, :method => "delete", data: { confirm: t("helpers.links.confirm") }, class: 'btn btn-danger btn-mini'
-  = link_to t('article.draft'), batch_draft_admin_articles_path, class: 'btn btn-mini', method: 'post'
-  = link_to t('article.ban'), batch_ban_admin_articles_path, class: 'btn btn-mini btn-warning', method: 'post'
+  = link_to t("helpers.links.destroy"), batch_destroy_admin_articles_path, :method => :delete, data: { confirm: t("helpers.links.confirm") }, class: 'btn btn-danger btn-mini'
+  = link_to t('article.draft'), batch_draft_admin_articles_path, class: 'btn btn-mini'
+  = link_to t('article.ban'), batch_ban_admin_articles_path, class: 'btn btn-mini btn-warning'
 
   .btn-group
     button.btn.btn-mini.dropdown-toggle data-toggle= "dropdown"
@@ -17,6 +17,6 @@
       li.divider
       li= link_to t('helpers.ok'), batch_classify_admin_articles_path, class: 'classify_batch_ok'
 
-  = link_to t('article.publish'), batch_publish_admin_articles_path, class: 'btn btn-mini btn-success', method: 'post'
+  = link_to t('article.publish'), batch_publish_admin_articles_path, class: 'btn btn-mini btn-success'
 
   = will_paginate articles

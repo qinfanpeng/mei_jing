@@ -1,7 +1,7 @@
 class Article < ActiveRecord::Base
   attr_accessible :content, :digest, :image, :publisher, :status, :title, :column_ids
 
-  validates_presence_of :title, :digest, :content, :publisher, :column_ids, :status
+  validates_presence_of :title, :digest, :content, :publisher, :status #, :column_ids
   validates :digest, length: { maximum: 300 }
   validates :status, inclusion: %w[drafted published banned]
 
@@ -22,5 +22,5 @@ class Article < ActiveRecord::Base
   scope :drafted, -> { where(status: 'drafted') }
   scope :published, -> { where(status: 'published') }
   default_scope { order('created_at desc') }
-  #default_scope { order("convert(title USING GBK)")}
+
 end

@@ -28,13 +28,13 @@ end
 group :test do
   gem 'rspec-rails', "~> 2.14.0"
   gem 'capybara', "~> 2.1.0"
+  gem 'launchy'
 end
 
-group :development do
-  gem 'zeus'
-end
 group :test, :development do
-  gem "factory_girl_rails", "~> 4.2.1"
+  gem 'factory_girl_rails', '4.1.0'
+  gem "capybara-webkit"
+  gem 'database_cleaner'
 end
 
 # Just for commandline tip output.

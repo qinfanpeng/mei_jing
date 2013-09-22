@@ -2,155 +2,121 @@
 require 'colorize'
 
 class Admin::ArticlesController < ApplicationController
-  before_filter :expire_fragments, only: [:update]
-  before_filter :expire_actions, only: [:create, :destroy, :update, :ban, :draft, :publish, :batch_ban, :batch_draft, :batch_publish]
+  before_filter :expire_actions, only: [:create, :destroy, :update, :ban, :draft, :publish, :batch_ban, :batch_draft, :batch_publish, :classify, :batch_classify]
+  before_filter :get_article, only: [:show, :edit, :update, :destroy, :ban, :draft, :publish, :classify]
 
-  caches_action :index, cache_path: Proc.new { |c| {page: c.params[:page]}  }
-  caches_action :drafted, cache_path: Proc.new { |c| {page: c.params[:page] } }
-  caches_action :banned, cache_path: Proc.new { |c| {page:c.params[:page]} }
-  caches_action :published, cache_path: Proc.new { |c| {page: c.params[:page]} }
+  #caches_action :index, cache_path: Proc.new { |c| {page: c.params[:page]}  }
+  #caches_action :drafted, cache_path: Proc.new { |c| {page: c.params[:page] } }
+  #caches_action :banned, cache_path: Proc.new { |c| {page:c.params[:page]} }
+  #caches_action :published, cache_path: Proc.new { |c| {page: c.params[:page]} }
 
+  respond_to :html, :json
   layout 'admin'
 
   def index
     @articles = Article.includes(:columns)
       .paginate(:page => params[:page])
-    puts request.fullpath.green
-    respond_to do |format|
-      format.html
-      format.json { render json: @articles }
-    end
+    respond_with @articles
   end
 
   def show
-    @article = Article.find(params[:id])
-    if stale?(:last_modified => @article.updated_at.utc, :etag => @article)
-      respond_to do |format|
-        format.html
-        format.json { render json: @article }
-      end
-    end
+    respond_with(@article) if stale?(:last_modified => @article.updated_at.utc, :etag => @article)
   end
 
   def new
     @article = Article.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @article }
-    end
+    respond_with @article
   end
 
-  def edit
-    @article = Article.find(params[:id])
-  end
+  def edit; end
 
   def create
     @article = Article.new(params[:article])
-    respond_to do |format|
-      if @article.save #and
-        format.html { redirect_to [:admin, @article], notice: t('article.flash.create.success') }
-        format.json { render json: @article, status: :created, location: @article }
+    respond_with(@article) do |format|
+      if @article.save
+        flash[:notice] = t('article.flash.create.success')
+        format.html { redirect_to [:admin, @article] }
       else
         flash[:error] = t('article.flash.create.error')
-        format.html { render action: "new" }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def drafted
-    puts '----drafted----'.green
     @articles = Article.drafted.includes(:columns)
       .paginate(:page => params[:page])
     render :index
   end
 
   def banned
-    puts '----banned----'.green
     @articles = Article.banned.includes(:columns)
       .paginate(page: params[:page])
     render :index
   end
 
   def published
-    puts '----published----'.green
     @articles = Article.published.includes(:columns)
       .paginate(:page => params[:page])
     render :index
   end
 
   def update
-    @article = Article.find(params[:id])
-
-    respond_to do |format|
-      if @article.update_attributes(params[:article])# and
-        format.html { redirect_to [:admin, @article], notice: t('article.flash.update.success') }
-        format.json { head :no_content }
+    respond_with(@article) do |format|
+      if @article.update_attributes(params[:article])
+        flash[:notice] = t('article.flash.update.success')
+        format.html { redirect_to [:admin, @article] }
       else
         flash[:error] = t('article.flash.update.error')
-        format.html { render action: "edit" }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def destroy
-    destroy_article params[:id]
-    respond_to do |format|
-      format.html { redirect_to admin_articles_url }
-      format.json { head :no_content }
-    end
+    @article.destroy
+    redirect_to admin_articles_url, notice: t('article.flash.destroy.success')
   end
 
   def ban
-    ban_article params[:id]
-    redirect_to :back
+    @article.update_attributes(status: 'banned')
+    redirect_to :back, notice: t('article.flash.ban.success')
   end
 
   def draft
-    draft_article params[:id]
-    redirect_to :back
+    @article.update_attributes(status: 'drafted')
+    redirect_to :back, notice: t('article.flash.draft.success')
   end
 
   def publish
-    publish_article params[:id]
-    redirect_to :back
+    @article.update_attributes(status: 'published')
+    redirect_to :back, notice: t('article.flash.publish.success')
   end
   def classify
-    id, _column_ids = params[:id], params[:column_ids]
-    Article.find(id).update_attributes(column_ids: _column_ids)
-    redirect_to :back
+    @article.update_attributes(column_ids: params[:column_ids])
+    redirect_to :back, notice: t('article.flash.classify.success')
   end
 
   def batch_ban
-    batch_action(params[:ids], :ban_article) if need_batch_action?(params[:ids])
-    redirect_to :back
+    batch_action(params[:ids], :ban, 'status',  'banned')
   end
 
   def batch_destroy
-    batch_action(params[:ids], :destroy_article) if need_batch_action?(params[:ids])
-    redirect_to :back
+    batch_action(params[:ids], :destroy)
   end
 
   def batch_draft
-    batch_action(params[:ids], :draft_article) if need_batch_action?(params[:ids])
-    redirect_to :back
-  end
-
-  def batch_classify
-    ids, _column_ids = params[:ids], params[:column_ids]
-    if need_batch_action?(ids) and _column_ids.size > 0
-      ids.each do |id|
-        Article.find(id).update_attributes(column_ids: _column_ids)
-      end
-    end
-    redirect_to :back
+    batch_action(params[:ids], :draft, 'status', 'drafted')
   end
 
   def batch_publish
-    batch_action(params[:ids], :publish_article) if need_batch_action?(params[:ids])
-    redirect_to :back
+    batch_action(params[:ids], :publish, 'status', 'published')
+  end
+
+  def batch_classify
+    if (not params[:column_ids].nil?)
+      batch_action(params[:ids], :classify, 'column_ids', params[:column_ids])
+    else
+      flash[:error] = t('article.flash.classify.error')
+    end
   end
 
   def search
@@ -159,53 +125,47 @@ class Admin::ArticlesController < ApplicationController
         boost_fields :title => 2.0
       end
       order_by :created_at, :desc
-      paginate page: params[:page] || 1, per_page: 10
+      paginate page: params[:page]
     end
     @articles = search.results
     render :index
   end
 
+
   private
-  def batch_action(ids, action)
-    ids.each do |id|
-      send action, id      # 利用send 动态调用方法
+  def batch_action(ids, action, attr=nil, value=nil)
+    if need_batch_action?(ids)
+      actions(ids, attr, value)
+      flash[:notice] = t("article.flash.#{action}.success")
+    else
+      flash[:warning] = t("article.flash.#{action}.warning")
     end
+    redirect_to :back
   end
 
   def need_batch_action?(ids)
     not ids.nil?
   end
 
-  def ban_article(id)
-    @article = Article.find(id)
-    @article.update_attributes({status: 'banned'})
-  end
-
-  def destroy_article(id)
-    @article = Article.find(id)
-    @article.destroy
-  end
-
-  def draft_article(id)
-    @article = Article.find(id)
-    @article.update_attributes({status: 'drafted'})
-  end
-
-  def publish_article(id)
-    @article = Article.find(id)
-    @article.update_attributes({status: 'published'})
-  end
-
-  def expire_fragments
-    [:article_content].each do |fragment|
-      expire_fragment fragment
+  def actions(ids, attr, value)
+    ids.each do |id|
+      if attr
+        Article.find(id).update_attributes(attr.to_sym => value)      # 利用send 动态调用方法
+      else
+        Article.find(id).destroy
+      end
     end
   end
 
   def expire_actions
     admin_cache_path = /.*\/admin\/articles(|\/published|\/drafted|\/banned)(|\?page=\d+)$/
     foreground_cache_path = /.*(|columns\/\d+)\/articles(|\?page=\d+)$/
+
     expire_fragment(admin_cache_path)
     expire_fragment(foreground_cache_path)
+  end
+
+  def get_article
+    @article = Article.find(params[:id])
   end
 end

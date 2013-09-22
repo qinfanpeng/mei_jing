@@ -73,6 +73,22 @@ zh_CN:
       update:
         success: 文章更新成功
         error: 文章更新失败
+      ban:
+        success: 文章屏蔽成功
+        warning: 没有选择需要屏蔽的文章
+      destroy:
+        success: 文章删除成功
+        warning: 没有选择需要删除的文章
+      draft:
+        success: 文章存为草稿成功
+        warning: 没有选择需要存为草稿的文章
+      classify:
+        success: 文章归属到所选栏目成功
+        warning: 没有选择需要归属到所选栏目的文章
+        error: 没有选择要归属到的栏目
+      publish:
+        success: 文章发布成功
+
 
   column:
     admin: 栏目管理

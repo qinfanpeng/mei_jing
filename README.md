@@ -28,6 +28,8 @@ The homework of mei_jing's interview
 相关参考资料：
 * [中文索引相关](https://github.com/quake/sunspot_chinese_example)
 * [sunspot](https://github.com/sunspot/sunspot)及其 [wiki](https://github.com/sunspot/sunspot/wiki)
+* 
+
 ##### 访问地址
 1. 前端访问地址 [http://ruby-rails-box-8958.apne1.actionbox.io:3000/articles](http://ruby-rails-box-8958.apne1.actionbox.io:3000/articles)
 2. 后台访问地址

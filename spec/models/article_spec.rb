@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 require 'spec_helper'
 
 describe Article do
-  subject{ build(:article) }
+  subject{ build_stubbed(:article) }  # 利用FatoryGirl 生成mock对象(假冒测试对象)，用于加快测试速度
 
   it { should respond_to(:title) }
   it { should respond_to(:digest) }

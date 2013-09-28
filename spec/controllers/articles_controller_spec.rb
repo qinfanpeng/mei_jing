@@ -35,12 +35,11 @@ describe Admin::ArticlesController do
   end
 
   describe "GET #show" do
-    before do
-      @article = create(:article)
-      get :show, id: @article
-    end
+    let(:article) { create(:article) }
+    before { get :show, id: article }
+
     it "assigns the requested article to @article" do
-      expect(assigns(:article)).to eq @article
+      expect(assigns(:article)).to eq article
     end
     it "renders the show template" do
       expect(response).to render_template :show
@@ -241,5 +240,4 @@ describe Admin::ArticlesController do
       end
     end
   end
-
 end

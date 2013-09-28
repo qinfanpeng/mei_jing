@@ -3,11 +3,10 @@
 require 'spec_helper'
 
 feature "Publish article" do
-  background do
-    create(:column, name: '行情')
-    @banned_article = create(:article, status: 'banned')
-    @drafted_article = create(:article, status: 'drafted')
-  end
+  background { create(:column, name: '行情') }
+  given(:banned_article) { create(:article, status: 'banned') }
+  given(:drafted_article) { create(:article, status: 'drafted') }
+
   scenario "Publish with all necessary data" do
     visit "/admin/articles/write"
     check "行情"
@@ -31,23 +30,26 @@ feature "Publish article" do
     page.should have_content '文章发布失败'
   end
   scenario "Publish a banned article" do
-    visit admin_article_path(@banned_article)
+    visit admin_article_path(banned_article)
     click_button '发布', match: :first
     page.should have_content '文章发布成功'
     page.should have_content '已发布'
   end
   scenario "Publish a drafted article" do
-    visit admin_article_path(@drafted_article)
+    visit admin_article_path(drafted_article)
     click_button '发布', match: :first
     page.should have_content '文章发布成功'
     page.should have_content '已发布'
   end
   scenario "Publish a batch of articles", js: true do
+    banned_article   # given()为let()的别名， 会缓存变量值，
+    drafted_article  # 在这里再引用一次，马上就会创建响应的变量
+
     visit admin_articles_path
     page.all('tr').size.should == 3
     page.all('tr', text: '已发布').size.should == 0
-    find(:css, ".article_ids[value='#{@banned_article.id}']").set(true)
-    find(:css, ".article_ids[value='#{@drafted_article.id}']").set(true)
+    find(:css, ".article_ids[value='#{banned_article.id}']").set(true)
+    find(:css, ".article_ids[value='#{drafted_article.id}']").set(true)
 
     click_link '发布', match: :prefer_exact
 
@@ -58,10 +60,9 @@ end
 
 
 feature "Update article" do
-  background do
-    @article = create(:article)
-    visit edit_admin_article_path(@article)
-  end
+  given(:article) { create(:article) }
+  background { visit edit_admin_article_path(article) }
+
   scenario "Update with valid data" do
     fill_in '发布人', with: '李四'
 
@@ -79,24 +80,24 @@ end
 
 
 feature "Ban article" do
-  background do
-    @article = create(:article)
-    @another_article = create(:article)
-  end
+  given(:article) { create(:article) }
+  given(:another_article) { create(:article) }
 
   scenario "Ban an article"do
-    visit admin_article_path(@article)
+    visit admin_article_path(article)
     click_button '屏蔽', match: :first
 
     page.should have_content '文章屏蔽成功'
     page.should have_content '已屏蔽'
   end
   scenario "Ban a batch of articles", js: true do
+    article
+    another_article
     visit published_admin_articles_path
     page.all('tr', text: '已发布').size.should == 2
 
-    find(:css, ".article_ids[value='#{@article.id}']").set(true)
-    find(:css, ".article_ids[value='#{@another_article.id}']").set(true)
+    find(:css, ".article_ids[value='#{article.id}']").set(true)
+    find(:css, ".article_ids[value='#{another_article.id}']").set(true)
     click_link '屏蔽', match: :prefer_exact
 
     page.all('tr', text: '已发布').size.should == 0
@@ -105,21 +106,23 @@ feature "Ban article" do
 end
 
 feature "Delete article" do
-  background do
-    @article = create(:article)
-    @another_article = create(:article)
-  end
+  given(:article) { create(:article) }
+  given(:another_article) { create(:article) }
+
   scenario "Delete an article" do
-    visit admin_article_path(@article)
+    visit admin_article_path(article)
     click_button '删除', match: :first
 
     page.should have_content '文章删除成功'
-    page.all('tr', text: @article.title).size.should == 0
+    page.all('tr', text: article.title).size.should == 0
   end
   scenario "Delete a batch of articles", js: true do
+    article
+    another_article
     visit admin_articles_path
-    find(:css, ".article_ids[value='#{@article.id}']").set(true)
-    find(:css, ".article_ids[value='#{@another_article.id}']").set(true)
+
+    find(:css, ".article_ids[value='#{article.id}']").set(true)
+    find(:css, ".article_ids[value='#{another_article.id}']").set(true)
     page.all('tr').size.should == 3
     click_link '删除', match: :first
 
@@ -130,23 +133,25 @@ end
 
 
 feature "Draft article"do
-  background do
-    @article = create(:article)
-    @another_article = create(:article)
-  end
+  given(:article) { create(:article) }
+  given(:another_article) { create(:article) }
+
   scenario "Draft an article" do
-    visit admin_article_path(@article)
+    visit admin_article_path(article)
     click_button '存为草稿', match: :first
 
     page.should have_content '文章存为草稿成功'
     page.should have_content '草稿'
   end
   scenario "Draft a batch of articles", js: true do
+    article
+    another_article
     visit published_admin_articles_path
+
     page.all('tr', text: '已发布').size.should == 2
 
-    find(:css, ".article_ids[value='#{@article.id}']").set(true)
-    find(:css, ".article_ids[value='#{@another_article.id}']").set(true)
+    find(:css, ".article_ids[value='#{article.id}']").set(true)
+    find(:css, ".article_ids[value='#{another_article.id}']").set(true)
     click_link '存为草稿', match: :first
 
     page.all('tr', text: '已发布').size.should == 0
@@ -155,41 +160,49 @@ feature "Draft article"do
 end
 
 feature "Classify article to columns", js: true do
-  background do
-    @article = create(:article)
-    @another_article = create(:article)
-    @column1 = create(:column, name: '个股')
-    @column2 = create(:column, name: '行情')
-  end
+  given(:article) { create(:article) }
+  given(:another_article) { create(:article) }
+  given(:column1) { create(:column, name: '个股') }
+  given(:column2) { create(:column, name: '行情') }
 
   scenario "Classify an article to a column" do
-    visit admin_article_path(@article)
+    column1
+    visit admin_article_path(article)
+
     click_button '归属到', match: :first
-    find(:css, "#column_ids_[value='#{@column1.id}']").set(true)
+    find(:css, "#column_ids_[value='#{column1.id.to_i}']").set(true)
     click_link '确认'
 
     page.should have_content '个股'
     page.should have_content '文章归属到所选栏目成功'
   end
   scenario "Classify an article to many columns" do
-    visit admin_article_path(@article)
+    column1
+    column2
+    visit admin_article_path(article)
+
     click_button '归属到', match: :first
-    find(:css, "#column_ids_[value='#{@column1.id}']").set(true)
-    find(:css, "#column_ids_[value='#{@column2.id}']").set(true)
+    find(:css, "#column_ids_[value='#{column1.id}']").set(true)
+    find(:css, "#column_ids_[value='#{column2.id}']").set(true)
     click_link '确认'
 
     page.should have_content '个股,行情'
     page.should have_content '文章归属到所选栏目成功'
   end
   scenario "Classify a batch of articles to many columns" do
+    article
+    another_article
+    column1
+    column2
     visit published_admin_articles_path
+
     page.all('tr', text: '行情,个股').size.should == 0
-    find(:css, ".article_ids[value='#{@article.id}']").set(true)
-    find(:css, ".article_ids[value='#{@another_article.id}']").set(true)
+    find(:css, ".article_ids[value='#{article.id}']").set(true)
+    find(:css, ".article_ids[value='#{another_article.id}']").set(true)
 
     click_button '归属到', match: :first
-    find(:css, "#column_ids_[value='#{@column1.id}']").set(true)
-    find(:css, "#column_ids_[value='#{@column2.id}']").set(true)   # 同时选择多个check_box 的语法
+    find(:css, "#column_ids_[value='#{column1.id}']").set(true)
+    find(:css, "#column_ids_[value='#{column2.id}']").set(true)   # 同时选择多个check_box 的语法
 
     click_link '确认'
     page.all('tr', text: '个股,行情').size.should == 2
@@ -199,8 +212,7 @@ end
 
 feature "List all published articles" do
   background do
-    @article = create(:article, status: 'published')
-    @another_article = create(:article, status: 'published')
+    create_list(:article, 2)
     visit published_admin_articles_path
   end
   scenario "All published articles are here" do
@@ -210,8 +222,7 @@ end
 
 feature "List all banned articles" do
   background do
-    @article = create(:article, status: 'banned')
-    @another_article = create(:article, status: 'banned')
+    create_list(:banned_article, 2)
     visit banned_admin_articles_path
   end
   scenario "All banned articles are here" do
@@ -221,8 +232,7 @@ end
 
 feature "List all drafted articles" do
   background do
-    @article = create(:article, status: 'drafted')
-    @another_article = create(:article, status: 'drafted')
+    create_list(:drafted_article, 2)
     visit drafted_admin_articles_path
   end
   scenario "All drafted articles are here" do

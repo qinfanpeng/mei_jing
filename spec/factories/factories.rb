@@ -17,6 +17,13 @@ FactoryGirl.define do
     factory :invalid_article do
       title nil
     end
+
+    factory :banned_article do
+      status 'banned'
+    end
+    factory :drafted_article do
+      status 'drafted'
+    end
   end
 
 end

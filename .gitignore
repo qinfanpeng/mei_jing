@@ -2,6 +2,7 @@
 doc/
 log/
 test/
+tmp/
 !tmp/image/
 public/
 sunspot_solr_mmseg4j/solr/data

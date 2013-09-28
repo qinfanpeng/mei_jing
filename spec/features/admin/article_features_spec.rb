@@ -4,9 +4,9 @@ require 'spec_helper'
 
 feature "Publish article" do
   background do
-    FactoryGirl.create(:column, name: '行情')
-    @banned_article = FactoryGirl.create(:article, status: 'banned')
-    @drafted_article = FactoryGirl.create(:article, status: 'drafted')
+    create(:column, name: '行情')
+    @banned_article = create(:article, status: 'banned')
+    @drafted_article = create(:article, status: 'drafted')
   end
   scenario "Publish with all necessary data" do
     visit "/admin/articles/write"
@@ -59,7 +59,7 @@ end
 
 feature "Update article" do
   background do
-    @article = FactoryGirl.create(:article)
+    @article = create(:article)
     visit edit_admin_article_path(@article)
   end
   scenario "Update with valid data" do
@@ -80,8 +80,8 @@ end
 
 feature "Ban article" do
   background do
-    @article = FactoryGirl.create(:article)
-    @another_article = FactoryGirl.create(:article)
+    @article = create(:article)
+    @another_article = create(:article)
   end
 
   scenario "Ban an article"do
@@ -106,8 +106,8 @@ end
 
 feature "Delete article" do
   background do
-    @article = FactoryGirl.create(:article)
-    @another_article = FactoryGirl.create(:article)
+    @article = create(:article)
+    @another_article = create(:article)
   end
   scenario "Delete an article" do
     visit admin_article_path(@article)
@@ -131,8 +131,8 @@ end
 
 feature "Draft article"do
   background do
-    @article = FactoryGirl.create(:article)
-    @another_article = FactoryGirl.create(:article)
+    @article = create(:article)
+    @another_article = create(:article)
   end
   scenario "Draft an article" do
     visit admin_article_path(@article)
@@ -156,10 +156,10 @@ end
 
 feature "Classify article to columns", js: true do
   background do
-    @article = FactoryGirl.create(:article)
-    @another_article = FactoryGirl.create(:article)
-    @column1 = FactoryGirl.create(:column, name: '个股')
-    @column2 = FactoryGirl.create(:column, name: '行情')
+    @article = create(:article)
+    @another_article = create(:article)
+    @column1 = create(:column, name: '个股')
+    @column2 = create(:column, name: '行情')
   end
 
   scenario "Classify an article to a column" do
@@ -199,8 +199,8 @@ end
 
 feature "List all published articles" do
   background do
-    @article = FactoryGirl.create(:article, status: 'published')
-    @another_article = FactoryGirl.create(:article, status: 'published')
+    @article = create(:article, status: 'published')
+    @another_article = create(:article, status: 'published')
     visit published_admin_articles_path
   end
   scenario "All published articles are here" do
@@ -210,8 +210,8 @@ end
 
 feature "List all banned articles" do
   background do
-    @article = FactoryGirl.create(:article, status: 'banned')
-    @another_article = FactoryGirl.create(:article, status: 'banned')
+    @article = create(:article, status: 'banned')
+    @another_article = create(:article, status: 'banned')
     visit banned_admin_articles_path
   end
   scenario "All banned articles are here" do
@@ -221,8 +221,8 @@ end
 
 feature "List all drafted articles" do
   background do
-    @article = FactoryGirl.create(:article, status: 'drafted')
-    @another_article = FactoryGirl.create(:article, status: 'drafted')
+    @article = create(:article, status: 'drafted')
+    @another_article = create(:article, status: 'drafted')
     visit drafted_admin_articles_path
   end
   scenario "All drafted articles are here" do
@@ -232,9 +232,9 @@ end
 
 feature "List all articles" do
   background do
-    @article1 = FactoryGirl.create(:article, status: 'banned')
-    @article2 = FactoryGirl.create(:article, status: 'published')
-    @article2 = FactoryGirl.create(:article, status: 'drafted')
+    @article1 = create(:article, status: 'banned')
+    @article2 = create(:article, status: 'published')
+    @article2 = create(:article, status: 'drafted')
     visit admin_articles_path
   end
   scenario "All articles are here" do

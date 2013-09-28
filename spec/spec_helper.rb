@@ -59,4 +59,7 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+  # Include Factory Girl syntax to simplify calls to factories
+  config.include FactoryGirl::Syntax::Methods
+
 end

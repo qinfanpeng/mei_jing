@@ -13,6 +13,10 @@ FactoryGirl.define do
     digest '测试摘要'
     content '测试内容'
     status 'published'
+
+    factory :invalid_article do
+      title nil
+    end
   end
 
 end

@@ -3,9 +3,29 @@ ENV['RAILS_ENV'] = 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 #require 'rspec/autorun'
-require 'capybara/rspec'
+#require 'capybara/rspec'
 
-Capybara.javascript_driver = :webkit
+require 'selenium-webdriver'
+require 'capybara/rspec'
+require 'selenium-webdriver'
+
+include Selenium
+
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
+
+Capybara.register_driver :firefox do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :firefox)
+end
+
+#Capybara.default_driver = :selenium
+#Capybara.default_driver = :firefox
+#Capybara.javascript_driver = :chrome
+Capybara.javascript_driver = :firefox
+
+
+#Capybara.javascript_driver = :webkit
 Capybara.default_wait_time = 4
 
 # Requires supporting ruby files with custom matchers and macros, etc,
@@ -63,3 +83,31 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 
 end
+
+module Selenium::WebDriver::Firefox
+  class Bridge
+    attr_accessor :speed
+
+    def execute(*args)
+      result = raw_execute(*args)['value']
+      case speed
+        when :slow
+          sleep 5
+        when :medium
+          sleep 0.5
+        when :fast
+          sleep 0
+      end
+      result
+    end
+  end
+end
+
+def set_speed(speed)
+  begin
+    page.driver.browser.send(:bridge).speed=speed
+  rescue
+  end
+end
+
+set_speed(:slow)

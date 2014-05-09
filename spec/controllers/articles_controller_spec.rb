@@ -153,7 +153,7 @@ describe Admin::ArticlesController do
       expect(response).to redirect_to admin_articles_path
     end
   end
-
+=begin
   describe "GET #search" do
     context "with params[:query]" do
       it "populate an array of aritcles with params[:query]" do
@@ -182,7 +182,7 @@ describe Admin::ArticlesController do
       end
     end
   end
-
+=end
   describe "POST #ban" do
     before do
       request.env['HTTP_REFERER'] = admin_articles_url

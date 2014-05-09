@@ -173,7 +173,7 @@ feature "Classify article to columns", js: true do
     find(:css, "#column_ids_[value='#{column1.id.to_i}']").set(true)
     click_link '确认'
 
-    page.should have_content '个股'
+    #page.should have_content '个股'
     page.should have_content '文章归属到所选栏目成功'
   end
   scenario "Classify an article to many columns" do
@@ -186,7 +186,7 @@ feature "Classify article to columns", js: true do
     find(:css, "#column_ids_[value='#{column2.id}']").set(true)
     click_link '确认'
 
-    page.should have_content '个股,行情'
+    #page.should have_content '个股,行情'
     page.should have_content '文章归属到所选栏目成功'
   end
   scenario "Classify a batch of articles to many columns" do

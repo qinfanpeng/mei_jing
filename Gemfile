@@ -33,8 +33,9 @@ end
 
 group :test, :development do
   gem 'factory_girl_rails', '4.1.0'
-  gem "capybara-webkit"
+	#  gem "capybara-webkit"
   gem 'database_cleaner'
+	gem "selenium-webdriver"
 end
 
 # Just for commandline tip output.

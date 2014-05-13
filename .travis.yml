@@ -7,9 +7,10 @@ env:
 before_install:
   - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
 install:
-  - bundle install
+  - bundle install --local
 before_script:
   - rails g devise user
+  - bundle exec rake db:migrate
   - bundle exec rake db:test:prepare
   - java -jar sunspot_solr_mmseg4j/start.jar # start solr server 
 script:

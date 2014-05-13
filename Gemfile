@@ -38,8 +38,12 @@ group :test, :development do
 	#  gem "capybara-webkit"
   gem 'database_cleaner'
 	gem "selenium-webdriver"
+  # Just for commandline tip output.
+  gem "colorize", "~> 0.5.8"
+  gem 'progress_bar'
 end
 
-# Just for commandline tip output.
-gem "colorize", "~> 0.5.8"
-gem 'progress_bar'
+group :production do 
+  gem 'pg'
+end
+

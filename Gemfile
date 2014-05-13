@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 #source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.12'
-gem 'sqlite3'
 
 gem 'therubyracer', :platforms => :ruby
 gem "twitter-bootstrap-rails", '2.2.6'
@@ -34,6 +33,7 @@ group :test do
 end
 
 group :test, :development do
+  gem 'sqlite3'
   gem 'factory_girl_rails', '4.1.0'
 	#  gem "capybara-webkit"
   gem 'database_cleaner'

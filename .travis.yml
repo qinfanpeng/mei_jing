@@ -4,8 +4,6 @@ rvm:
 env:
   - DB=sqlite
 
-before_install:
-  - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
 install:
   - bundle install
 before_script:

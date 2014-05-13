@@ -3,7 +3,10 @@
 require 'spec_helper'
 
 feature "Publish article" do
-  background { create(:column, name: '行情') }
+  background do
+    create(:column, name: '行情')  
+    sign_in_with(create(:user))
+  end
   given(:banned_article) { create(:article, status: 'banned') }
   given(:drafted_article) { create(:article, status: 'drafted') }
 
@@ -60,8 +63,10 @@ end
 
 
 feature "Update article" do
+  background do visit edit_admin_article_path(article) 
+    sign_in_with(create(:user))
+  end
   given(:article) { create(:article) }
-  background { visit edit_admin_article_path(article) }
 
   scenario "Update with valid data" do
     fill_in '发布人', with: '李四'
@@ -80,6 +85,7 @@ end
 
 
 feature "Ban article" do
+  background { sign_in_with(create(:user)) }
   given(:article) { create(:article) }
   given(:another_article) { create(:article) }
 
@@ -106,6 +112,7 @@ feature "Ban article" do
 end
 
 feature "Delete article" do
+  background { sign_in_with(create(:user)) }
   given(:article) { create(:article) }
   given(:another_article) { create(:article) }
 
@@ -133,6 +140,7 @@ end
 
 
 feature "Draft article"do
+  background { sign_in_with(create(:user)) }
   given(:article) { create(:article) }
   given(:another_article) { create(:article) }
 
@@ -160,6 +168,7 @@ feature "Draft article"do
 end
 
 feature "Classify article to columns", js: true do
+  background { sign_in_with(create(:user)) }
   given(:article) { create(:article) }
   given(:another_article) { create(:article) }
   given(:column1) { create(:column, name: '个股') }
@@ -211,6 +220,7 @@ end
 
 feature "List all published articles" do
   background do
+    sign_in_with(create(:user))
     create_list(:article, 2)
     visit published_admin_articles_path
   end
@@ -222,6 +232,7 @@ end
 feature "List all banned articles" do
   background do
     create_list(:banned_article, 2)
+    sign_in_with(create(:user))
     visit banned_admin_articles_path
   end
   scenario "All banned articles are here" do
@@ -231,6 +242,7 @@ end
 
 feature "List all drafted articles" do
   background do
+    sign_in_with(create(:user))
     create_list(:drafted_article, 2)
     visit drafted_admin_articles_path
   end
@@ -244,6 +256,7 @@ feature "List all articles" do
     @article1 = create(:article, status: 'banned')
     @article2 = create(:article, status: 'published')
     @article2 = create(:article, status: 'drafted')
+    sign_in_with(create(:user))
     visit admin_articles_path
   end
   scenario "All articles are here" do

@@ -2,6 +2,9 @@
 require 'spec_helper'
 
 describe Admin::ArticlesController do
+  # 调用devise的helper方法 sign_in, 需要在spec_helper.rb 中引入
+  # config.include Devise::TestHelpers, :type => :controller
+  before {sign_in(create(:user))}
 
   describe "GET #index" do
     context "with params[:page]" do

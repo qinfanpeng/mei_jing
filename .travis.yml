@@ -4,13 +4,13 @@ rvm:
 env:
   - DB=sqlite
 
-before_install
+before_install:
   - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
 install:
   - bundle install
 before_script:
   - rails g devise user
   - rake db:test:prepare
-  - java -jar sunspot_solr_mmseg4j/start.jar # start solr server 
+  - java -jar sunspot_solr_mmseg4j/start.jar &  # start solr server 
 script:
   - rspec spec/

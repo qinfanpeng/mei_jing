@@ -139,7 +139,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    rake (10.1.0)
+    rake (10.3.1)
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.4)
@@ -236,6 +236,7 @@ DEPENDENCIES
   progress_bar
   rails (= 3.2.12)
   rails_kindeditor (~> 0.4.0)
+  rake (= 10.3.1)
   rspec-rails (~> 2.14.0)
   sass-rails (~> 3.2.3)
   selenium-webdriver

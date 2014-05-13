@@ -19,6 +19,7 @@ gem 'sunspot_rails'
 gem 'thin'
 
 gem 'devise'
+gem 'rake', '10.3.1'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -33,7 +34,7 @@ group :test do
 end
 
 group :test, :development do
-  gem 'sqlite3'
+  
   gem 'factory_girl_rails', '4.1.0'
 	#  gem "capybara-webkit"
   gem 'database_cleaner'
@@ -43,7 +44,7 @@ end
 group :production do 
   gem 'pg'
 end
-
+gem 'sqlite3'
 # Just for commandline tip output.
 gem "colorize", "~> 0.5.8"
 gem 'progress_bar'

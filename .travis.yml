@@ -6,8 +6,10 @@ env:
 
 before_install:
   - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
+  - gem install bundler bundle_cache
 install:
-  - bundle install --local
+  - bundle_cache_install
+
 before_script:
   - rails g devise user
   - bundle exec rake db:migrate
@@ -15,3 +17,12 @@ before_script:
   - java -jar sunspot_solr_mmseg4j/start.jar # start solr server 
 script:
   - rspec spec/
+
+after_script:
+  - bundle_cache
+
+env:
+  global:
+  - BUNDLE_ARCHIVE="mei_jing_bundle"
+  - AWS_S3_BUCKET="travisci-bundler-cache"
+  - RAILS_ENV=test

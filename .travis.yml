@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - 2.1.1
+env:
+  - DB=sqlite
+install:
+  - bundle install 
+before_script:
+  - rake db:test:prepare
+  - rake sunspot:solr:start  # start solr server 
+script:
+  - rspec spec/
+before_script:
+  

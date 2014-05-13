@@ -7,4 +7,4 @@ tmp/
 public/
 sunspot_solr_mmseg4j/solr/data
 solr.bak/
-
+db/*.sqlite3

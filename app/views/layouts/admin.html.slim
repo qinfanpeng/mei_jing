@@ -20,6 +20,18 @@ html lang="en"
         .container-fluid
 
           =link_to t('helpers.mei_jing_admin'), '#', class: 'brand'
+          
+          p.navbar-text.pull-right
+            -if user_signed_in? 
+              = current_user.email 
+              = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' 
+              '|
+              = link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' 
+            -else 
+              = link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  
+              '|
+              = link_to "Login", new_user_session_path, :class => 'navbar-link' 
+
           .container-fluid.nav-collapse
             =form_tag search_admin_articles_path, class: 'navbar-form pull-right', method: 'get' do |f|
               input placeholder="文章全文搜索" name="query"

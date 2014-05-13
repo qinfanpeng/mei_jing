@@ -30,8 +30,16 @@ jQuery ->
     e.stopPropagation()
 
   $("ul.dropdown-menu-admin li a").click (e) ->
-    $(this).find('input').click()
+    check_box = $(this).find('input')
+    toggle_check_box(check_box)
+    #check_box.trigger("click");
     return false
+
+  toggle_check_box = (check_box) ->
+    if (check_box.attr("checked")?)
+      check_box.removeAttr("checked");      
+    else
+      check_box.attr("checked", "true");
 
   $('.classify_batch_ok').click ->
     submit_article_batch_form $(this).attr('href')

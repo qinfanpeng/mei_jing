@@ -5,6 +5,8 @@ class Admin::ColumnsController < ApplicationController
 
   after_filter :expire_column_framents, only: [:create, :update, :destroy]
   before_filter :get_column, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
+  
   def index
     @columns = Column.paginate(:page => params[:page])
     respond_with(@columns)

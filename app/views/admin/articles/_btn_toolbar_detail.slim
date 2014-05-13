@@ -6,7 +6,7 @@
   = button_to t('article.draft'), draft_admin_article_path(article), class: 'btn btn-mini'
   = button_to t('article.ban'), ban_admin_article_path, class: 'btn btn-mini btn-warning'
 
-  = form_tag classify_admin_article_path(article), class: 'classify_form' do |f|
+  = form_tag classify_admin_article_path(article), class: 'classify_form' do 
     .btn-group
       button.btn.btn-mini.dropdown-toggle data-toggle= "dropdown"
         = t('article.classify')
@@ -15,10 +15,11 @@
         - columns.each do |column|
           li
             a
-              = check_box_tag('column_ids[]', column.id)
+              - checked = article.columns.include?(column)
+              = check_box_tag('column_ids[]', column.id, checked)
               = column.name
         li.divider
         li= link_to t('helpers.ok'), '', class: 'classify_ok'
-
+  
   = button_to t('article.publish'), publish_admin_article_path, class: 'btn btn-mini btn-success'
   = link_to t('article.preview'), article_path(article), class: 'btn btn-mini'

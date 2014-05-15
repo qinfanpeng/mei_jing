@@ -6,7 +6,5 @@
     .controls
       = f.text_area :body, :class => 'text_field',rows: 4, cols: 400, data: {info: '请输入评论内容'} 
   = f.hidden_field :article_id
-  .control-group
-    = f.label ' ', :class => 'control-label'
-    .controls
-      = f.submit t('comment.create'), :class => 'btn btn-primary btn-mini'
+  
+  = f.submit t('comment.create'), :class => 'btn btn-primary btn-mini'

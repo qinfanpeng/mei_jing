@@ -1,0 +1,30 @@
+- model_class = User
+div class="page-header"
+  h1=t 'user.detail'
+
+p
+  strong= t('user.email') + ':'
+  br
+  = @user.email
+
+p
+  strong= t('user.last_sign_in_at') + ':'
+  br
+  = @user.last_sign_in_at
+
+p
+  strong= t('user.last_sign_in_ip') + ':'
+  br
+  = @user.last_sign_in_ip
+
+p
+  strong= t('user.sign_in_count') + ':'
+  br
+  = @user.sign_in_count
+
+.form-actions
+  = link_to t("helpers.links.back"), :back, :class => 'btn btn-mini'
+  '
+  = link_to t("helpers.links.edit"), edit_admin_column_path(@user), class: 'btn btn-mini'
+  '
+  = link_to t("helpers.links.destroy"), admin_column_path(@user), method: "delete", data: { confirm: t("helpers.links.confirm") }, class: 'btn btn-danger btn-mini'

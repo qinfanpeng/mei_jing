@@ -28,6 +28,7 @@ MeiJing::Application.routes.draw do
         post :batch_publish
       end
     end
+    resources :users
   end
 
   #scope :module => "admin" do

@@ -114,9 +114,10 @@ zh_CN:
     detail: 用户详细信息
     login: 登录
     logout: 退出
-    profile: 个人资料
+    profile: 修改个人资料
     password: 密码
     new_password: 新密码
+    current_password: 当前密码
     password_confirmation: 确认密码
     new_password_confirmation: 确认新密码
     remember_me: 记住我

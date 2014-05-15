@@ -7,4 +7,8 @@
       = f.text_area :body, :class => 'text_field',rows: 4, cols: 400, data: {info: '请输入评论内容'} 
   = f.hidden_field :article_id
   
-  = f.submit t('comment.create'), :class => 'btn btn-primary btn-mini'
+
+  -if @comment.new_record?
+    = f.submit t('comment.create'), :class => 'btn btn-primary btn-mini'
+  -else
+    = f.submit t('comment.update'), :class => 'btn btn-primary btn-mini'

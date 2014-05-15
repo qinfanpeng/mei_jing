@@ -35,6 +35,12 @@ class CommentsController < ApplicationController
   # GET /comments/1/edit
   def edit
     @comment = Comment.find(params[:id])
+    
+    if request.env['HTTP_REFERER'] == article_url(@comment.article)
+      render layout: 'frontend'
+    else
+      render layout: 'admin'
+    end
   end
 
   # POST /comments
@@ -57,10 +63,15 @@ class CommentsController < ApplicationController
   # PUT /comments/1.json
   def update
     @comment = Comment.find(params[:id])
-
+    @article = @comment.article
     respond_to do |format|
       if @comment.update_attributes(params[:comment])
-        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
+        # if request.env['HTTP_REFERER'] == article_url(@comment.article)
+        #   format.html { redirect_to article_path(@article), notice: 'Comment was successfully updated.' }
+        # else
+        #   format.html { redirect_to admin_article_path(@article), notice: 'Comment was successfully updated.' }
+        # end
+        format.html { redirect_to article_path(@article), notice: 'Comment was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

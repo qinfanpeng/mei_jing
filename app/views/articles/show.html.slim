@@ -15,7 +15,11 @@ h3= t('article.comments')
 - @comments.each do |comment|
   div.article_comment
     p = comment.body
-    p = link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } 
+    p 
+      -if user_signed_in? 
+        = link_to t('helpers.links.edit'), edit_comment_path(comment), class: 'comment_delete_link'
+        '&nbsp;&nbsp;
+      = link_to t('helpers.links.destroy'), comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'comment_delete_link' 
 
 -if user_signed_in? 
   = render 'comments/form' 

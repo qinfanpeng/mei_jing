@@ -27,22 +27,19 @@ html lang="en"
             span.icon-bar
           =link_to t('helpers.mei_jing'), articles_path, class: 'brand'
 
-          p.navbar-text.pull-right
-            -if user_signed_in? 
-              = current_user.email 
-              = link_to t('user.profile'), edit_user_registration_path, :class => 'navbar-link' 
-              '|
-              = link_to t('user.logout'), destroy_user_session_path, method: :delete, :class => 'navbar-link' 
-            -else 
-              = link_to t('user.sign_up'), new_user_registration_path, :class => 'navbar-link'  
-              '|
-              = link_to t('user.login'), new_user_session_path, :class => 'navbar-link' 
-
           .container-fluid.nav-collapse
             ul.nav
               - cache(:columns) do
                 - all_columns.each do |column|
                   li= link_to column.name, "/columns/#{column.id}/articles"
+            ul.nav.pull-right
+              -if user_signed_in? 
+                li= link_to current_user.email, admin_user_path(current_user)
+                li= link_to t('user.profile'), edit_user_registration_path, :class => 'navbar-link' 
+                li= link_to t('user.logout'), destroy_user_session_path, method: :delete, :class => 'navbar-link' 
+              -else 
+                li= link_to t('user.sign_up'), new_user_registration_path, :class => 'navbar-link'  
+                li= link_to t('user.login'), new_user_session_path, :class => 'navbar-link' 
 
 
     .container-fluid.container-foreground

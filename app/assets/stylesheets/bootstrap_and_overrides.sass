@@ -27,6 +27,13 @@ $admin_end_color: hsla(213, 32%, 15%, 1)
 
 body
   font-family: 宋体, serif
+  a
+    text-decoration: underline
+    &:hover
+      background-color: hsla(360, 100%, 100%, 0)
+      color: #52a8ec
+    &.btn
+      text-decoration: none
 
 .navbar-inner
   @include gradient($start_color, $end_color)
@@ -34,7 +41,9 @@ body
   
   a
     color: white !important
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+    text-decoration: none
+    font-family: 宋体, serif
+    //font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
     &:hover
       text-decoration: underline !important
 
@@ -46,6 +55,12 @@ body
     .btn-navbar:hover
       @include gradient(hsla(207, 80%, 38%, 1), hsla(207, 80%, 44%, 1))
       background-color: hsla(207, 80%, 44%, 1)
+    .nav-collapse
+      .nav
+        li
+          a
+            padding: 10px 6px 10px
+            font-family: 宋体 !important
     
     .in.collapse
       ul
@@ -91,21 +106,12 @@ div.page-header
 
 a.brand
   &:hover
-    background-color: hsla(198, 100%, 40%, 1)
     font-weight: bold
     text-shadow: 0 1px 0 hsla(0, 100%, 100%, 0.1), 0 0 30px hsla(0, 100%, 100%, 0.125)
 table
   tr
     th
       font-weight: normal
-    td
-      a
-        text-decoration: underline
-        &:hover
-          background-color: #F5F5F5
-          color: #52a8ec
-        &.btn
-          text-decoration: none
 
 a.dropdown-toggle:hover
   cursor: pointer
@@ -142,3 +148,5 @@ a.dropdown-toggle:hover
   input
     line-height: 10px
     width: 310px
+
+

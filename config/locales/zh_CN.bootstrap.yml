@@ -116,11 +116,14 @@ zh_CN:
     logout: 退出
     profile: 个人资料
     password: 密码
+    new_password: 新密码
     password_confirmation: 确认密码
+    new_password_confirmation: 确认新密码
     remember_me: 记住我
     sign_up: 注册
     forget_password: 忘记密码？
     send_me_email: 邮件告知我
+    change_password: 改密码
   comment:
     body: 评论内容
     create: 发表评论

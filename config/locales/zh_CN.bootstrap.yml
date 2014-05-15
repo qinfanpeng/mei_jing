@@ -120,6 +120,7 @@ zh_CN:
     remember_me: 记住我
     sign_up: 注册
     forget_password: 忘记密码？
+    send_me_email: 邮件告知我
   comment:
     body: 评论内容
     create: 发表评论

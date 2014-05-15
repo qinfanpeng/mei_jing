@@ -29,9 +29,7 @@
 
   <div class="form-actions">
     <%= f.submit t('user.sign_up'), :class => 'btn btn-primary' %>
-    <%- if controller_name != 'sessions' %>
-      <%= link_to t('user.login'), new_session_path(resource_name), class: 'btn' %>
-    <% end -%>
+    <%= render "devise/shared/links" %>
   </div>
 
 <% end %>

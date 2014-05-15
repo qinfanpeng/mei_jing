@@ -17,12 +17,7 @@
 
   <div class="form-actions">
     <%= f.submit t('user.send_me_email'), :class => 'btn btn-primary' %>
-    <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-      <%= link_to t('user.sign_up'), new_registration_path(resource_name), class: 'btn' %>
-    <% end -%>
-    <%- if controller_name != 'sessions' %>
-      <%= link_to t('user.login'), new_session_path(resource_name), class: 'btn' %>
-    <% end -%>
+    <%= render "devise/shared/links" %>
   </div>
 <% end %>
 

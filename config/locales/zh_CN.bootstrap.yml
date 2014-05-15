@@ -112,6 +112,13 @@ zh_CN:
     last_sign_in_ip: 最后登录IP
     sign_in_count: 总登录次数
     detail: 用户详细信息
+    login: 登录
+    logout: 退出
+    profile: 个人资料
+    password: 密码
+    remember_me: 记住我
+    sign_up: 注册
+    forget_password: 忘记密码？
   comment:
     body: 评论内容
     create: 发表评论

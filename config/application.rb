@@ -62,6 +62,19 @@ module MeiJing
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.raise_delivery_errors = true
+
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => 'baci.lindsaar.net',
+      :user_name            => 'qinfanpeng@gmail.com',
+      :password             => '4q1f4p625',
+      :authentication       => 'plain',
+      :enable_starttls_auto => true  }
+
     config.generators do |g|
       g.test_framework :rspec,
       fixtures: true,

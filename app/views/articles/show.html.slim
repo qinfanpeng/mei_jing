@@ -10,3 +10,11 @@ article.article-detail
     center
       = image_tag @article.image.url(:large), id: 'large_image'
     = raw @article.content
+
+h3= t('article.comments')
+- @comments.each do |comment|
+  div.article_comment
+    p = comment.body
+    p = link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } 
+
+= render 'comments/form' 

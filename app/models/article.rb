@@ -6,6 +6,7 @@ class Article < ActiveRecord::Base
   validates :status, inclusion: %w[drafted published banned]
 
   has_and_belongs_to_many :columns
+  has_many :comments
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>", large: '450x450>' }
 
   self.per_page = 12

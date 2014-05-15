@@ -14,6 +14,7 @@ zh_CN:
       destroy: "删除"
       new: "新建"
       edit: "编辑"
+      show: 查看
       cancel_account: 注销账号
     titles:
       edit: "编辑 %{model}"
@@ -67,6 +68,7 @@ zh_CN:
     edit: 修改文章
     searches: 搜索结果
     preview: 预览
+    comments: 评论
     flash:
       create:
         success: 文章发布成功
@@ -110,3 +112,12 @@ zh_CN:
     last_sign_in_ip: 最后登录IP
     sign_in_count: 总登录次数
     detail: 用户详细信息
+  comment:
+    body: 评论内容
+    create: 发表评论
+    user: 作者邮箱
+    article: 所属新闻
+    created_at: 评论时间
+    all: 所有评论
+    detail: 评论详情
+    admin: 评论管理

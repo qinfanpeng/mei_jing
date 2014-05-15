@@ -1,0 +1,17 @@
+- model_class = Comment
+div class="page-header"
+  h1=t 'comment.detail'
+
+p
+  strong User:
+  = @comment.user.email
+p
+  strong Body:
+  = @comment.body
+p
+  strong Article:
+  = @comment.article.title
+
+= link_to 'Edit', edit_comment_path(@comment)
+'|
+= link_to 'Back', comments_path

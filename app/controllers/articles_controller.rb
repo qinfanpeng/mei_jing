@@ -17,12 +17,14 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    if stale?(:last_modified => @article.updated_at.utc, :etag => @article)
+    @comments = @article.comments.all
+    @comment = @article.comments.build
+    #if stale?(:last_modified => @article.updated_at.utc, :etag => @article)
       respond_to do |format|
         format.html
         format.json { render json: @article }
       end
-    end
+    #end
   end
 
   def belong_to_column

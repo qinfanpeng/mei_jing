@@ -20,7 +20,9 @@ class Admin::ArticlesController < ApplicationController
   end
 
   def show
-    respond_with(@article) if stale?(:last_modified => @article.updated_at.utc, :etag => @article)
+    @comments = @article.comments.all
+    @comment = @article.comments.build
+    respond_with(@article) #if stale?(:last_modified => @article.updated_at.utc, :etag => @article)
   end
 
   def new

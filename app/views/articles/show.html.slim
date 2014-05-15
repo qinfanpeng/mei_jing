@@ -17,4 +17,9 @@ h3= t('article.comments')
     p = comment.body
     p = link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } 
 
-= render 'comments/form' 
+-if user_signed_in? 
+  = render 'comments/form' 
+-else
+  p
+    strong 登录后方可评论！
+    = link_to t('user.login'), new_user_session_path, :class => 'navbar-link' 

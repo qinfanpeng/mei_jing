@@ -3,6 +3,8 @@ class ArticlesController < ApplicationController
   caches_action :index, cache_path: Proc.new { |c| {page: c.params[:page]}  }
   caches_action :belong_to_column, cache_path: Proc.new { |c| {page: c.params[:page]}  }
 
+  layout 'frontend'
+
   def index
     @articles = Article.published.includes(:columns)
       .paginate(:page => params[:page], per_page: 8)

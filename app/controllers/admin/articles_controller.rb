@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-require 'colorize'
 
 class Admin::ArticlesController < ApplicationController
   before_filter :expire_actions, only: [:create, :destroy, :update, :ban, :draft, :publish, :batch_ban, :batch_draft, :batch_publish, :classify, :batch_classify]
@@ -16,7 +15,7 @@ class Admin::ArticlesController < ApplicationController
 
   def index
     @articles = Article.includes(:columns)
-      .paginate(:page => params[:page])
+      .paginate(:page => params[:page], per_page: 10)
     respond_with @articles
   end
 

@@ -12,6 +12,6 @@ install:
 before_script:
   # - rails g devise user
   - bundle exec rake db:migrate RAILS_ENV=test
-  - java -jar sunspot_solr_mmseg4j/start.jar # start solr server 
+  - cd sunspot_solr_mmseg4j && java -jar start.jar # start solr server 
 script:
   - rspec spec/

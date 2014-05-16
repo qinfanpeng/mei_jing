@@ -13,8 +13,7 @@ before_script:
   # - rails g devise user
   - bundle exec rake db:migrate RAILS_ENV=test
   - cd sunspot_solr_mmseg4j 
-  - touch solr.log 
-  - java -jar start.jar 2>solr.log & # start solr server 
+  - java -jar start.jar & # start solr server 
 script:
   - rspec spec/controllers
   - rspec spec/models

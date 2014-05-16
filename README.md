@@ -1,5 +1,6 @@
 mei_jing
 ========
+[![Build Status](https://api.travis-ci.org/qinfanpeng/mei_jing.png?branch=master)](https://travis-ci.org/qinfanpeng/mei_jing)
 
 The homework of mei_jing's interview
 ### 相关说明

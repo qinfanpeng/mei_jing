@@ -82,7 +82,10 @@ RSpec.configure do |config|
   # Include Factory Girl syntax to simplify calls to factories
   config.include FactoryGirl::Syntax::Methods
   config.include Devise::TestHelpers, :type => :controller
-
+ 
+  config.before(:type => :controller) do
+    request.env["HTTP_REFERER"] = "/"
+  end
 end
 
 module Selenium::WebDriver::Firefox

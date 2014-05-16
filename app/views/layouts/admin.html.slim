@@ -56,8 +56,13 @@ html lang="en"
               li.divider
               li= link_to_unless_current t('column.admin'), admin_columns_path do
                 = link_to t('column.admin'), admin_columns_path, class:'current'
+
+              li= link_to_unless_current t('role.admin'), admin_roles_path do
+                = link_to t('role.admin'), admin_roles_path, class:'current'
+
               li= link_to_unless_current t('user.admin'), admin_users_path do
                 = link_to t('user.admin'), admin_users_path, class:'current'
+
               li= link_to_unless_current t('comment.admin'), comments_path do
                 = link_to t('comment.admin'), comments_path, class:'current'
 

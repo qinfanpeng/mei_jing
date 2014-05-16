@@ -1,0 +1,287 @@
+2014-05-16 19:54:45.138:INFO::Logging to STDERR via org.mortbay.log.StdErrLog
+2014-05-16 19:54:45.225:INFO::jetty-6.1-SNAPSHOT
+2014-05-16 19:54:45.293:INFO::Extract file:/Users/fpqin/workspace/mei_jing/sunspot_solr_mmseg4j/webapps/solr.war to /var/folders/fn/pyb566gs69q23tv81s0_8zx80000gn/T/Jetty_0_0_0_0_8983_solr.war__solr__k1kf17/webapp
+May 16, 2014 7:54:45 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: JNDI not configured for solr (NoInitialContextEx)
+May 16, 2014 7:54:45 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: solr home defaulted to 'solr/' (could not find system property or JNDI)
+May 16, 2014 7:54:45 PM org.apache.solr.core.SolrResourceLoader <init>
+INFO: Solr home set to 'solr/'
+May 16, 2014 7:54:45 PM org.apache.solr.servlet.SolrDispatchFilter init
+INFO: SolrDispatchFilter.init()
+May 16, 2014 7:54:45 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: JNDI not configured for solr (NoInitialContextEx)
+May 16, 2014 7:54:45 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: solr home defaulted to 'solr/' (could not find system property or JNDI)
+May 16, 2014 7:54:45 PM org.apache.solr.core.CoreContainer$Initializer initialize
+INFO: looking for solr.xml: /Users/fpqin/workspace/mei_jing/sunspot_solr_mmseg4j/solr/solr.xml
+May 16, 2014 7:54:45 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: JNDI not configured for solr (NoInitialContextEx)
+May 16, 2014 7:54:45 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: solr home defaulted to 'solr/' (could not find system property or JNDI)
+May 16, 2014 7:54:45 PM org.apache.solr.core.CoreContainer <init>
+INFO: New CoreContainer: solrHome=solr/ instance=147407825
+May 16, 2014 7:54:45 PM org.apache.solr.core.SolrResourceLoader <init>
+INFO: Solr home set to 'solr/'
+May 16, 2014 7:54:45 PM org.apache.solr.core.SolrResourceLoader <init>
+INFO: Solr home set to 'solr/./'
+May 16, 2014 7:54:45 PM org.apache.solr.core.SolrConfig initLibs
+INFO: Adding specified lib dirs to ClassLoader
+May 16, 2014 7:54:45 PM org.apache.solr.core.Config getLuceneVersion
+WARNING: the luceneMatchVersion is not specified, defaulting to LUCENE_24 emulation. You should at some point declare and reindex to at least 3.0, because 2.4 emulation is deprecated and will be removed in 4.0. This parameter will be mandatory in 4.0.
+May 16, 2014 7:54:45 PM org.apache.solr.core.SolrConfig <init>
+INFO: Using Lucene MatchVersion: LUCENE_24
+May 16, 2014 7:54:45 PM org.apache.solr.core.SolrConfig <init>
+WARNING: Deprecated syntax found. <highlighting/> should move to <searchComponent/>
+May 16, 2014 7:54:45 PM org.apache.solr.core.SolrConfig <init>
+INFO: Loaded SolrConfig: solrconfig.xml
+May 16, 2014 7:54:45 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: Reading Solr Schema
+May 16, 2014 7:54:45 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: Schema name=sunspot
+May 16, 2014 7:54:45 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created string: org.apache.solr.schema.StrField
+May 16, 2014 7:54:45 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created tdouble: org.apache.solr.schema.TrieDoubleField
+May 16, 2014 7:54:45 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created rand: org.apache.solr.schema.RandomSortField
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : com.chenlb.mmseg4j.solr.MMSegTokenizerFactory
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.StandardFilterFactory
+May 16, 2014 7:54:46 PM org.apache.solr.analysis.BaseTokenStreamFactory assureMatchVersion
+WARNING: StandardFilterFactory is using deprecated LUCENE_24 emulation. You should at some point declare and reindex to at least 3.0, because 2.x emulation is deprecated and will be removed in 4.0
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.LowerCaseFilterFactory
+May 16, 2014 7:54:46 PM org.apache.solr.analysis.BaseTokenStreamFactory assureMatchVersion
+WARNING: LowerCaseFilterFactory is using deprecated LUCENE_24 emulation. You should at some point declare and reindex to at least 3.0, because 2.x emulation is deprecated and will be removed in 4.0
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.PorterStemFilterFactory
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created text: org.apache.solr.schema.TextField
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created boolean: org.apache.solr.schema.BoolField
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created date: org.apache.solr.schema.DateField
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created sdouble: org.apache.solr.schema.SortableDoubleField
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created sfloat: org.apache.solr.schema.SortableFloatField
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created sint: org.apache.solr.schema.SortableIntField
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created slong: org.apache.solr.schema.SortableLongField
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created tint: org.apache.solr.schema.TrieIntField
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created tfloat: org.apache.solr.schema.TrieFloatField
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created tdate: org.apache.solr.schema.TrieDateField
+May 16, 2014 7:54:46 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created location: org.apache.solr.schema.LatLonType
+May 16, 2014 7:54:46 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: default search field is text
+May 16, 2014 7:54:46 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: query parser default operator is AND
+May 16, 2014 7:54:46 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: unique key field: id
+May 16, 2014 7:54:46 PM com.chenlb.mmseg4j.Dictionary loadDic
+INFO: chars loaded time=208ms, line=12638, on file=solr/./mmseg4j_dict/chars.dic
+May 16, 2014 7:54:46 PM com.chenlb.mmseg4j.Dictionary loadWord
+INFO: words loaded time=1ms, line=1, on file=solr/./mmseg4j_dict/words-my.dic
+May 16, 2014 7:54:46 PM com.chenlb.mmseg4j.Dictionary loadWord
+INFO: words loaded time=168ms, line=149853, on file=solr/./mmseg4j_dict/words.dic
+May 16, 2014 7:54:46 PM com.chenlb.mmseg4j.Dictionary loadDic
+INFO: load all dic use time=378ms
+May 16, 2014 7:54:46 PM com.chenlb.mmseg4j.Dictionary loadUnit
+INFO: unit loaded time=1ms, line=22, on file=solr/./mmseg4j_dict/units.dic
+May 16, 2014 7:54:46 PM com.chenlb.mmseg4j.solr.MMSegTokenizerFactory inform
+INFO: dic load... in=file:/Users/fpqin/workspace/mei_jing/sunspot_solr_mmseg4j/solr/./mmseg4j_dict/
+May 16, 2014 7:54:46 PM org.apache.solr.core.SolrCore <init>
+INFO: [] Opening new SolrCore at solr/./, dataDir=./solr/data/
+May 16, 2014 7:54:46 PM org.apache.solr.core.JmxMonitoredMap <init>
+INFO: No JMX servers found, not exposing Solr information with JMX.
+May 16, 2014 7:54:46 PM org.apache.solr.core.SolrCore initListeners
+INFO: [] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+May 16, 2014 7:54:46 PM org.apache.solr.core.SolrCore initListeners
+INFO: [] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=solr rocks,start=0,rows=10}, {q=static firstSearcher warming query from solrconfig.xml}]}
+May 16, 2014 7:54:46 PM org.apache.solr.request.XSLTResponseWriter <init>
+WARNING: org.apache.solr.request.XSLTResponseWriter is deprecated. Please use the corresponding class in org.apache.solr.response
+May 16, 2014 7:54:46 PM org.apache.solr.response.XSLTResponseWriter init
+INFO: xsltCacheLifetimeSeconds=5
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created standard: solr.SearchHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created dismax: solr.SearchHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created partitioned: solr.SearchHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /spell: solr.SearchHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created tvrh: org.apache.solr.handler.component.SearchHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: org.apache.solr.handler.extraction.ExtractingRequestHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/extract: org.apache.solr.handler.extraction.ExtractingRequestHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /terms: org.apache.solr.handler.component.SearchHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.SearchHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /elevate: solr.SearchHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update: solr.XmlUpdateRequestHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/javabin: solr.BinaryUpdateRequestHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /analysis/document: solr.DocumentAnalysisRequestHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /analysis/field: solr.FieldAnalysisRequestHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.CSVRequestHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/csv: solr.CSVRequestHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /admin/: org.apache.solr.handler.admin.AdminHandlers
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /admin/ping: PingRequestHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /debug/dump: solr.DumpRequestHandler
+May 16, 2014 7:54:46 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /mlt: solr.MoreLikeThisHandler
+May 16, 2014 7:54:46 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@51d2bb9f main
+May 16, 2014 7:54:46 PM org.apache.solr.update.CommitTracker <init>
+INFO: commitTracker AutoCommit: disabled
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFO: Initializing spell checkers
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SpellCheckComponent inform
+WARNING: No queryConverter defined, using default converter
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.QueryElevationComponent inform
+INFO: Loading QueryElevation from: /Users/fpqin/workspace/mei_jing/sunspot_solr_mmseg4j/solr/./conf/elevate.xml
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@617e53c9
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@2caee320
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@dc160cb
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@12b9b67b
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@5e7b4ed7
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@717535b6
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@617e53c9
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@2caee320
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@dc160cb
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@12b9b67b
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@5e7b4ed7
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@717535b6
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@617e53c9
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@2caee320
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@dc160cb
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@12b9b67b
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@5e7b4ed7
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@717535b6
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@617e53c9
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@2caee320
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@dc160cb
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@12b9b67b
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@5e7b4ed7
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.SpellCheckComponent@461979eb
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@717535b6
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@617e53c9
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@2caee320
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@dc160cb
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@12b9b67b
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@5e7b4ed7
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.TermVectorComponent@32935741
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@717535b6
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.TermsComponent@67458657
+May 16, 2014 7:54:46 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@51d2bb9f main
+May 16, 2014 7:54:46 PM org.apache.solr.core.CoreContainer register
+INFO: registering core: 
+May 16, 2014 7:54:46 PM org.apache.solr.servlet.SolrDispatchFilter init
+INFO: user.dir=/Users/fpqin/workspace/mei_jing/sunspot_solr_mmseg4j
+May 16, 2014 7:54:46 PM org.apache.solr.servlet.SolrDispatchFilter init
+INFO: SolrDispatchFilter.init() done
+May 16, 2014 7:54:46 PM org.apache.solr.servlet.SolrServlet init
+INFO: SolrServlet.init()
+May 16, 2014 7:54:46 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: JNDI not configured for solr (NoInitialContextEx)
+May 16, 2014 7:54:46 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: solr home defaulted to 'solr/' (could not find system property or JNDI)
+May 16, 2014 7:54:46 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=null path=null params={start=0&event=firstSearcher&q=solr+rocks&rows=10} hits=0 status=0 QTime=41 
+May 16, 2014 7:54:46 PM org.apache.solr.servlet.SolrServlet init
+INFO: SolrServlet.init() done
+May 16, 2014 7:54:46 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+query+from+solrconfig.xml} hits=0 status=0 QTime=1 
+May 16, 2014 7:54:46 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+May 16, 2014 7:54:46 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener newSearcher
+INFO: Loading spell index for spellchecker: default
+May 16, 2014 7:54:46 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: JNDI not configured for solr (NoInitialContextEx)
+May 16, 2014 7:54:46 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: solr home defaulted to 'solr/' (could not find system property or JNDI)
+May 16, 2014 7:54:46 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@51d2bb9f main
+May 16, 2014 7:54:46 PM org.apache.solr.servlet.SolrUpdateServlet init
+INFO: SolrUpdateServlet.init() done
+2014-05-16 19:54:46.734:WARN::failed SocketConnector@0.0.0.0:8983: java.net.BindException: Address already in use
+2014-05-16 19:54:46.734:WARN::failed Server@4c5b55a9: java.net.BindException: Address already in use
+2014-05-16 19:54:46.735:WARN::EXCEPTION 
+java.net.BindException: Address already in use
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:521)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:414)
+	at java.net.ServerSocket.bind(ServerSocket.java:326)
+	at java.net.ServerSocket.<init>(ServerSocket.java:192)
+	at org.mortbay.jetty.bio.SocketConnector.newServerSocket(SocketConnector.java:80)
+	at org.mortbay.jetty.bio.SocketConnector.open(SocketConnector.java:73)
+	at org.mortbay.jetty.AbstractConnector.doStart(AbstractConnector.java:283)
+	at org.mortbay.jetty.bio.SocketConnector.doStart(SocketConnector.java:147)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.Server.doStart(Server.java:235)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.xml.XmlConfiguration.main(XmlConfiguration.java:985)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.mortbay.start.Main.invokeMain(Main.java:194)
+	at org.mortbay.start.Main.start(Main.java:534)
+	at org.mortbay.start.Main.start(Main.java:441)
+	at org.mortbay.start.Main.main(Main.java:119)
+2014-05-16 19:54:48.330:INFO::Shutdown hook executing
+2014-05-16 19:54:48.330:INFO::Stopped SocketConnector@0.0.0.0:8983
+2014-05-16 19:54:48.446:INFO::Shutdown hook complete

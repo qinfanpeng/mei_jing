@@ -1,7 +1,7 @@
 MeiJing::Application.routes.draw do
+  
   resources :comments
-
-
+  
   devise_for :users
 
   #root to: 'articles#index'
@@ -32,6 +32,7 @@ MeiJing::Application.routes.draw do
       end
     end
     resources :users
+    resources :roles
   end
 
   #scope :module => "admin" do

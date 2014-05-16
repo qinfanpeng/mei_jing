@@ -1,0 +1,14 @@
+- model_class = Role
+div class="page-header"
+  h1=t 'role.detail'
+
+p
+  strong= t('role.name') + ': '
+  = @role.name
+
+.form-actions
+  = link_to t("helpers.links.back"), :back, :class => 'btn btn-mini'
+  '
+  = link_to t("helpers.links.edit"), edit_admin_role_path(@role), :class => 'btn btn-mini'
+  '
+  = link_to t("helpers.links.destroy"), admin_role_path(@role), method: "delete", data: { confirm: t("helpers.links.confirm") }, class: 'btn btn-danger btn-mini'

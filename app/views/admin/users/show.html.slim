@@ -22,6 +22,11 @@ p
   br
   = @user.sign_in_count
 
+p
+  strong= t('user.role') + ':'
+  br
+  = @user.role.name
+
 .form-actions
   = link_to t("helpers.links.back"), :back, :class => 'btn btn-mini'
   '

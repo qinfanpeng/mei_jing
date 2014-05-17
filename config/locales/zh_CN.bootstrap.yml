@@ -125,6 +125,7 @@ zh_CN:
     forget_password: 忘记密码？
     send_me_email: 邮件告知我
     change_password: 改密码
+    role: 角色
   comment:
     body: 评论内容
     create: 发表评论

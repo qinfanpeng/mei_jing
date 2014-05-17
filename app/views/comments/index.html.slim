@@ -16,7 +16,7 @@ table class="table table-striped table-hover table-condensed table-bordered tabl
         td = link_to comment.user.email, admin_user_path(comment.user)
         td = link_to comment.article.title, admin_article_path(comment.article)
         td.comment_body_td = comment.body
-        td.actions
+        td.actions.comment_actions
           = link_to t("helpers.links.show"), comment, :class => 'btn btn-mini'
           = link_to t("helpers.links.edit"), edit_comment_path(comment), :class => 'btn btn-mini'
           = link_to t("helpers.links.destroy"), comment, :confirm => 'Are you sure?', :method => :delete, :class => 'btn btn-mini btn-danger'

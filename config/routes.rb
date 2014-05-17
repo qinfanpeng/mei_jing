@@ -4,7 +4,7 @@ MeiJing::Application.routes.draw do
   
   devise_for :users
 
-  #root to: 'articles#index'
+  root to: 'articles#index'
   match '' => redirect('/articles')
   namespace :admin do
     resources :columns

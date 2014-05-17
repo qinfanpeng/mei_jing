@@ -4,5 +4,6 @@ FactoryGirl.define do
   factory :user do
   	email "qinfanpeng@gmail.com"
   	password "qinfanpeng"
+    role_id 1
   end
 end

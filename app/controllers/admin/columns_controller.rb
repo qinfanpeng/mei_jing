@@ -7,6 +7,8 @@ class Admin::ColumnsController < ApplicationController
   before_filter :get_column, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
   
+  load_and_authorize_resource
+  
   def index
     @columns = Column.paginate(:page => params[:page])
     respond_with(@columns)

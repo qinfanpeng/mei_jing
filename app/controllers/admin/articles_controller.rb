@@ -13,6 +13,8 @@ class Admin::ArticlesController < ApplicationController
   respond_to :html, :json
   layout 'admin'
 
+  load_and_authorize_resource
+
   def index
     @articles = Article.includes(:columns)
       .paginate(:page => params[:page], per_page: 10)

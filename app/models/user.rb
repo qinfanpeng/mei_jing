@@ -10,4 +10,12 @@ class User < ActiveRecord::Base
 
   has_many :comments
   belongs_to :role
+
+  def admin?
+  	self.try(:role_id) == 1
+  end
+
+  def editor?
+  	self.try(:role_id) == 2
+  end
 end

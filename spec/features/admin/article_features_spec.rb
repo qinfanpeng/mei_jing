@@ -112,7 +112,8 @@ feature "Ban article" do
 end
 
 feature "Delete article" do
-  background { sign_in_with(create(:user)) }
+
+  background { sign_in_with(create(:user))}
   given(:article) { create(:article) }
   given(:another_article) { create(:article) }
 

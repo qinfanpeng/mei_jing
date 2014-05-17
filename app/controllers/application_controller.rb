@@ -8,4 +8,9 @@ class ApplicationController < ActionController::Base
     request.fullpath =~ /^\/admin/
   end
 
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = t('cancan.flash.cannot')
+    redirect_to root_url
+  end
+
 end

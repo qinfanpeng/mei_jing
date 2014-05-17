@@ -2,7 +2,7 @@
 class Admin::UsersController < ApplicationController
 
   before_filter :get_user, only: [:show, :edit, :update, :destroy]
-  #before_filter :authenticate_user!
+  before_filter :authenticate_user!
   
   respond_to :html, :json
   layout 'admin'
